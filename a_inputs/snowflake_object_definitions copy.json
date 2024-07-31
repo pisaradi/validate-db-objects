@@ -1,0 +1,113 @@
+{
+    "QA  VW DIM COUNTRY2": [
+        {
+        "source":    ["Snowflake"],
+        "warehouse": ["WH_ADI_DATA_ANALYTICS"],
+        "database":  ["DB_ADI_EMEA_QA"],
+        "schema":    ["SCH_ADI_EMEA_ERP"],
+        "object":    ["VW_DIM_COUNTRY"],
+        "dim_cols":  [
+                        "COUNTRY_ID", "COUNTRY_CODE", "COUNTRY_NAME", "COUNTRY_ORD_NUM", "REGION", "REGION_ORD_NUM",
+                        "PM_REGION", "PM_REGION_ORD_NUM", "CURRENCY_CODE", "PLANNED_RATE", "SALES_ORG",
+                        "IS_ON_SAP_FROM", "PROJECT_THRESHOLD_LOC", "CUSTOMER_STRATIFICATION_ACTIVE"
+                     ],
+        "fact_cols": [],
+
+        "table_analyzes":  ["candidate_keys", "count_of_columns"],
+        "column_analyzes": {
+                                "COUNTRY_ID": ["avg"], "REGION_ORD_NUM": ["min", "avg", "max"],
+                                "CURRENCY_CODE": ["unique"], "IS_ON_SAP_FROM": ["count_of_nulls"]
+                           },
+        "expectations":    {
+                                "table_analyzes": [
+                                    {"candidate_keys": ["COUNTRY_ID", "COUNTRY_CODE", "COUNTRY_NAME", "COUNTRY_ORD_NUM"]},
+                                    {"count_of_columns": [14]},
+                                    {"NOT_FROM_OPTIONS1": ["FOR TABLE ANALYZES1"]},
+                                    {"NOT_FROM_OPTIONS2": ["FOR TABLE ANALYZES2"]},
+                                    {"NOT_FROM_OPTIONS3": ["FOR TABLE ANALYZES3"]},
+                                    {"NOT_FROM_OPTIONS4": ["FOR TABLE ANALYZES4"]}
+                                ],
+                                "column_analyzes": [
+                                    ["COUNTRY_ID", "avg", 17.44444444],
+                                    ["REGION_ORD_NUM", "min", 1],
+                                    ["REGION_ORD_NUM", "avg", 50],
+                                    ["REGION_ORD_NUM", "max", 100],
+                                    ["TEST1a", "TEST1b", "Test1c"]
+                                ]
+                           },
+        
+        "comments":  ["It's forbidden to create key connection.",
+                      "Only a single analysis over a column in column_analyzes is possible.",
+                      "If text between any 2 starting and ending association brackets cannot be written in a single line, keep brackets on separate lines.",
+                      "Expectations choose analyzes type as the key, option as the 1st parameter and expectations as the 2nd parameter of the list."]
+        }
+    ],
+    "DEV__VW_DIM_ADI_EMEA_SUPPLIER_STG": [
+        {
+        "source":    ["Snowflake"],
+        "warehouse": ["WH_ADI_DATA_ANALYTICS"],
+        "database":  ["DB_ADI_EMEA_DEV"],
+        "schema":    ["SCH_ADI_EMEA_ERP"],
+        "object":    ["VW_DIM_ADI_EMEA_SUPPLIER_STG"],
+        "dim_cols":  [
+                        "SUPPLIER_ID", "COUNTRY_CODE", "SUPPLIER_ACCOUNT", "SUPPLIER_NAME",
+                        "SUPPLIER_LABEL", "INTERCO_TYPE", "COMPANY_CODE", "CROSS_COMPANY_CODE"
+                     ],
+        "fact_cols": [],
+
+        "table_analyzes":  ["count_of_rows", "count_of_columns", "count_of_nulls", "candidate_keys"],
+        "column_analyzes": {
+                                "COMPANY_CODE": ["min", "avg", "max"],
+                                "SUPPLIER_ACCOUNT": ["count_of_nulls"]
+                           },
+        "expectations": {
+                            "table_analyzes": [{"test key level1": "test  value  level1"}]
+                        },
+
+        "comments":  [
+                        "It's forbidden to create key connection.",
+                        "Only a single analysis over a column in column_analyzes is possible.",
+                        "If text between any 2 starting and ending association brackets cannot be written in a single line, keep brackets on separate lines.",
+                        "Expectations choose analyzes type as the key, option as the 1st parameter and expectations as the 2nd parameter of the list."
+                     ]
+        }
+    ],
+    "DWH__DimSupplier": [
+        {
+        "source":    ["SQL Server"],
+        "warehouse": ["NL85W1028\\SQLMCP51"],
+        "database":  ["ADI_EMEA_DWH"],
+        "schema":    ["dbo"],
+        "object":    ["DimSupplier"],
+        "dim_cols":  [
+                        "Sup_ID", "AccountCode", "SupplierName", "Country_ID",
+                        "VendorType", "Supplier_Subject", "InterGroupInd", "CaptureCCTV",
+                        "TopLevelSupplierParentCode", "TopLevelSupplierName", "Vendor_Incomp"
+                     ],
+        "fact_cols": [],
+
+        "table_analyzes":  ["count_of_rows", "count_of_columns", "count_of_nulls"],
+        "column_analyzes": {
+                                "Sup_ID": ["min", "avg", "max"],
+                                "AccountCode": ["count_of_nulls"]
+                           },
+        "expectations": {
+                            "table_analyzes": [
+                                {"count_of_rows": [80374]},
+                                {"count_of_columns": [11]}
+                            ],
+                            "column_analyzes": [
+                                ["Sup_ID", "min", 1],
+                                ["Sup_ID", "avg", 49130.59627],
+                                ["Sup_ID", "max", 92415]
+                            ]
+                        },
+
+        "comments":  ["It's forbidden to create key connection.",
+                      "Only a single analysis over a column in column_analyzes is possible.",
+                      "If text between any 2 starting and ending association brackets cannot be written in a single line, keep brackets on separate lines.",
+                      "Expectations choose analyzes type as the key, option as the 1st parameter and expectations as the 2nd parameter of the list."
+                     ]
+        }
+    ]
+}

@@ -1,0 +1,943 @@
+2024-07-04 16:30:33: start
+2024-07-04 16:30:34: completed: Load data from a .json file
+2024-07-04 16:37:19: start
+2024-07-04 16:37:20: completed: Load data from a .json file
+2024-07-04 16:37:28: completed: Establish a connection to Snowflake
+2024-07-04 16:37:30: completed: Generate Snowflake datasets
+2024-07-04 16:37:30: completed: Analyze all datasets
+2024-07-04 16:37:30: completed: Compare analyzed results with expectations
+2024-07-04 16:37:30: completed: Display results of Snowflake dataset analyzes
+2024-07-04 16:37:30: end
+
+2024-07-04 16:37:33: start
+2024-07-04 16:39:23: start
+2024-07-04 16:39:24: completed: Load data from a .json file
+2024-07-04 16:39:37: completed: Establish a connection to Snowflake
+2024-07-04 16:39:45: completed: Generate Snowflake datasets
+2024-07-04 16:39:45: completed: Analyze all datasets
+2024-07-04 16:39:45: completed: Compare analyzed results with expectations
+2024-07-04 16:39:45: completed: Display results of Snowflake dataset analyzes
+2024-07-04 16:39:45: end
+
+2024-07-04 16:41:17: start
+2024-07-04 16:41:36: completed: Load data from a .json file
+2024-07-04 16:41:53: completed: Establish a connection to Snowflake
+2024-07-04 16:42:02: completed: Generate Snowflake datasets
+2024-07-04 16:42:02: completed: Analyze all datasets
+2024-07-04 16:42:02: completed: Compare analyzed results with expectations
+2024-07-04 16:44:20: start
+2024-07-04 16:44:22: completed: Load data from a .json file
+2024-07-04 16:44:33: completed: Establish a connection to Snowflake
+2024-07-04 16:44:42: completed: Generate Snowflake datasets
+2024-07-04 16:44:42: completed: Analyze all datasets
+2024-07-04 16:44:42: completed: Compare analyzed results with expectations
+2024-07-04 16:44:42: completed: Display results of Snowflake dataset analyzes
+2024-07-04 16:44:42: end
+
+2024-07-04 16:48:31: start
+2024-07-04 16:48:33: completed: Load data from a .json file
+2024-07-04 16:48:45: completed: Establish a connection to Snowflake
+2024-07-04 16:48:55: completed: Generate Snowflake datasets
+2024-07-04 16:48:55: completed: Analyze all datasets
+2024-07-04 16:48:55: completed: Compare analyzed results with expectations
+2024-07-04 16:48:55: completed: Display results of Snowflake dataset analyzes
+2024-07-04 16:48:55: end
+
+2024-07-04 16:50:22: start
+2024-07-04 16:50:26: completed: Load data from a .json file
+2024-07-04 16:50:38: completed: Establish a connection to Snowflake
+2024-07-04 16:50:47: completed: Generate Snowflake datasets
+2024-07-04 16:50:47: completed: Analyze all datasets
+2024-07-04 16:50:47: completed: Compare analyzed results with expectations
+2024-07-04 16:50:47: completed: Display results of Snowflake dataset analyzes
+2024-07-04 16:50:47: end
+
+2024-07-08 14:52:22: start
+2024-07-08 14:52:24: completed: Load data from a .json file
+2024-07-08 14:54:42: start
+2024-07-08 14:54:44: completed: Load data from a .json file
+2024-07-08 14:54:56: completed: Establish a connection to Snowflake
+2024-07-08 14:55:15: completed: Generate Snowflake datasets
+2024-07-08 14:55:15: completed: Analyze all datasets
+2024-07-08 14:55:15: completed: Compare analyzed results with expectations
+2024-07-08 14:55:15: completed: Display results of Snowflake dataset analyzes
+2024-07-08 14:55:15: end
+
+2024-07-08 14:58:04: start
+2024-07-08 14:58:06: completed: Load data from a .json file
+2024-07-08 14:58:51: start
+2024-07-08 14:58:52: completed: Load data from a .json file
+2024-07-08 15:03:58: start
+2024-07-08 15:04:00: completed: Load data from a .json file
+2024-07-08 15:06:35: start
+2024-07-08 15:06:37: completed: Load data from a .json file
+2024-07-08 15:06:50: completed: Establish a connection to Snowflake
+2024-07-08 15:07:19: start
+2024-07-08 15:07:21: completed: Load data from a .json file
+2024-07-08 15:07:34: completed: Establish a connection to Snowflake
+2024-07-08 15:07:46: completed: Generate Snowflake datasets
+2024-07-08 15:07:46: completed: Analyze all datasets
+2024-07-08 15:07:46: completed: Compare analyzed results with expectations
+2024-07-08 15:07:46: completed: Display results of Snowflake dataset analyzes
+2024-07-08 15:07:46: end
+
+2024-07-08 15:13:53: start
+2024-07-08 15:13:55: completed: Load data from a .json file
+2024-07-08 15:14:08: completed: Establish a connection to Snowflake
+2024-07-08 15:14:16: completed: Generate Snowflake datasets
+2024-07-08 15:14:16: completed: Analyze all datasets
+2024-07-08 15:14:16: completed: Compare analyzed results with expectations
+2024-07-08 15:14:16: completed: Display results of Snowflake dataset analyzes
+2024-07-08 15:14:16: end
+
+2024-07-08 15:32:58: start
+2024-07-08 15:33:00: completed: Load data from a .json file
+2024-07-08 15:33:14: completed: Establish a connection to Snowflake
+2024-07-08 15:33:28: completed: Generate Snowflake datasets
+2024-07-08 15:33:28: completed: Analyze all datasets
+2024-07-08 15:33:28: completed: Compare analyzed results with expectations
+2024-07-08 15:33:28: completed: Display results of Snowflake dataset analyzes
+2024-07-08 15:33:28: end
+
+2024-07-08 15:34:05: start
+2024-07-08 15:34:08: completed: Load data from a .json file
+2024-07-08 15:34:22: completed: Establish a connection to Snowflake
+2024-07-08 15:34:38: completed: Generate Snowflake datasets
+2024-07-08 15:34:38: completed: Analyze all datasets
+2024-07-08 15:34:38: completed: Compare analyzed results with expectations
+2024-07-08 15:34:38: completed: Display results of Snowflake dataset analyzes
+2024-07-08 15:34:38: end
+
+2024-07-08 15:35:23: start
+2024-07-08 15:35:25: completed: Load data from a .json file
+2024-07-08 15:35:38: completed: Establish a connection to Snowflake
+2024-07-08 15:35:48: completed: Generate Snowflake datasets
+2024-07-08 15:35:48: completed: Analyze all datasets
+2024-07-08 15:35:48: completed: Compare analyzed results with expectations
+2024-07-08 15:35:48: completed: Display results of Snowflake dataset analyzes
+2024-07-08 15:35:48: end
+
+2024-07-08 15:36:40: start
+2024-07-08 15:36:41: completed: Load data from a .json file
+2024-07-08 15:36:52: completed: Establish a connection to Snowflake
+2024-07-08 15:37:08: completed: Generate Snowflake datasets
+2024-07-08 15:37:09: completed: Analyze all datasets
+2024-07-08 15:37:09: completed: Compare analyzed results with expectations
+2024-07-08 15:37:09: completed: Display results of Snowflake dataset analyzes
+2024-07-08 15:37:09: end
+
+2024-07-09 09:43:28: start
+2024-07-09 09:43:30: completed: Load data from a .json file
+2024-07-09 09:43:33: completed: Establish a connection to Snowflake
+2024-07-09 09:43:41: completed: Generate Snowflake datasets
+2024-07-09 09:43:41: completed: Analyze all datasets
+2024-07-09 09:43:41: completed: Compare analyzed results with expectations
+2024-07-09 09:43:41: completed: Display results of Snowflake dataset analyzes
+2024-07-09 09:43:41: end
+
+2024-07-09 09:44:26: start
+2024-07-09 09:44:27: completed: Load data from a .json file
+2024-07-09 09:44:29: completed: Establish a connection to Snowflake
+2024-07-09 09:44:37: completed: Generate Snowflake datasets
+2024-07-09 09:44:37: completed: Analyze all datasets
+2024-07-09 09:44:37: completed: Compare analyzed results with expectations
+2024-07-09 09:44:37: completed: Display results of Snowflake dataset analyzes
+2024-07-09 09:44:37: end
+
+2024-07-09 09:46:32: start
+2024-07-09 09:46:34: completed: Load data from a .json file
+2024-07-09 09:46:36: completed: Establish a connection to Snowflake
+2024-07-09 09:46:44: completed: Generate Snowflake datasets
+2024-07-09 09:46:44: completed: Analyze all datasets
+2024-07-09 09:46:44: completed: Compare analyzed results with expectations
+2024-07-09 09:46:44: completed: Display results of Snowflake dataset analyzes
+2024-07-09 09:46:44: end
+
+2024-07-09 09:51:12: start
+2024-07-09 09:51:14: completed: Load data from a .json file
+2024-07-09 09:51:17: completed: Establish a connection to Snowflake
+2024-07-09 09:51:24: completed: Generate Snowflake datasets
+2024-07-09 09:51:24: completed: Analyze all datasets
+2024-07-09 09:51:24: completed: Compare analyzed results with expectations
+2024-07-09 09:51:24: completed: Display results of Snowflake dataset analyzes
+2024-07-09 09:51:24: end
+
+2024-07-09 10:12:39: start
+2024-07-09 10:12:41: completed: Load data from a .json file
+2024-07-09 10:12:48: completed: Establish a connection to Snowflake
+2024-07-09 10:12:58: completed: Generate Snowflake datasets
+2024-07-09 10:17:08: completed: Analyze all datasets
+2024-07-09 10:17:08: completed: Compare analyzed results with expectations
+2024-07-09 10:17:47: start
+2024-07-09 10:17:49: completed: Load data from a .json file
+2024-07-09 10:17:51: completed: Establish a connection to Snowflake
+2024-07-09 10:17:58: completed: Generate Snowflake datasets
+2024-07-09 10:17:58: completed: Analyze all datasets
+2024-07-09 10:17:58: completed: Compare analyzed results with expectations
+2024-07-09 10:17:58: completed: Display results of Snowflake dataset analyzes
+2024-07-09 10:17:58: end
+
+2024-07-09 10:33:29: start
+2024-07-09 10:33:33: completed: Load data from a .json file
+2024-07-09 10:33:35: completed: Establish a connection to Snowflake
+2024-07-09 10:33:44: completed: Generate Snowflake datasets
+2024-07-09 10:33:44: completed: Analyze all datasets
+2024-07-09 10:33:44: completed: Compare analyzed results with expectations
+2024-07-09 10:35:10: start
+2024-07-09 10:35:12: completed: Load data from a .json file
+2024-07-09 10:35:14: completed: Establish a connection to Snowflake
+2024-07-09 10:35:21: completed: Generate Snowflake datasets
+2024-07-09 10:35:21: completed: Analyze all datasets
+2024-07-09 10:35:21: completed: Compare analyzed results with expectations
+2024-07-09 10:35:21: completed: Display results of Snowflake dataset analyzes
+2024-07-09 10:35:21: end
+
+2024-07-09 10:36:29: start
+2024-07-09 10:36:50: start
+2024-07-09 10:36:52: completed: Load data from a .json file
+2024-07-09 10:36:54: completed: Establish a connection to Snowflake
+2024-07-09 10:37:02: completed: Generate Snowflake datasets
+2024-07-09 10:37:02: completed: Analyze all datasets
+2024-07-09 10:37:02: completed: Compare analyzed results with expectations
+2024-07-09 10:37:40: start
+2024-07-09 10:37:41: completed: Load data from a .json file
+2024-07-09 10:37:44: completed: Establish a connection to Snowflake
+2024-07-09 10:37:52: completed: Generate Snowflake datasets
+2024-07-09 10:37:52: completed: Analyze all datasets
+2024-07-09 10:37:52: completed: Compare analyzed results with expectations
+2024-07-09 10:37:52: completed: Display results of Snowflake dataset analyzes
+2024-07-09 10:37:52: end
+
+2024-07-09 10:38:14: start
+2024-07-09 10:38:15: completed: Load data from a .json file
+2024-07-09 10:38:18: completed: Establish a connection to Snowflake
+2024-07-09 10:38:25: completed: Generate Snowflake datasets
+2024-07-09 10:38:25: completed: Analyze all datasets
+2024-07-09 10:38:25: completed: Compare analyzed results with expectations
+2024-07-09 10:45:31: start
+2024-07-09 10:45:32: completed: Load data from a .json file
+2024-07-09 10:45:35: completed: Establish a connection to Snowflake
+2024-07-09 10:45:43: completed: Generate Snowflake datasets
+2024-07-09 10:45:43: completed: Analyze all datasets
+2024-07-09 10:45:43: completed: Compare analyzed results with expectations
+2024-07-09 10:46:26: completed: Display results of Snowflake dataset analyzes
+2024-07-09 10:46:26: end
+
+2024-07-09 10:48:49: start
+2024-07-09 10:48:51: completed: Load data from a .json file
+2024-07-09 10:48:53: completed: Establish a connection to Snowflake
+2024-07-09 10:49:00: completed: Generate Snowflake datasets
+2024-07-09 10:49:00: completed: Analyze all datasets
+2024-07-09 10:49:00: completed: Compare analyzed results with expectations
+2024-07-09 10:49:00: completed: Display results of Snowflake dataset analyzes
+2024-07-09 10:49:00: end
+
+2024-07-09 10:50:40: start
+2024-07-09 10:50:42: completed: Load data from a .json file
+2024-07-09 10:50:45: completed: Establish a connection to Snowflake
+2024-07-09 10:50:52: completed: Generate Snowflake datasets
+2024-07-09 10:50:52: completed: Analyze all datasets
+2024-07-09 10:50:52: completed: Compare analyzed results with expectations
+2024-07-09 10:50:52: completed: Display results of Snowflake dataset analyzes
+2024-07-09 10:50:52: end
+
+2024-07-09 10:52:04: start
+2024-07-09 10:52:06: completed: Load data from a .json file
+2024-07-09 10:52:09: completed: Establish a connection to Snowflake
+2024-07-09 10:52:16: completed: Generate Snowflake datasets
+2024-07-09 10:52:16: completed: Analyze all datasets
+2024-07-09 10:52:16: completed: Compare analyzed results with expectations
+2024-07-09 10:52:16: completed: Display results of Snowflake dataset analyzes
+2024-07-09 10:52:16: end
+
+2024-07-09 13:10:46: start
+2024-07-09 13:10:48: completed: Load data from a .json file
+2024-07-09 13:10:51: completed: Establish a connection to Snowflake
+2024-07-09 13:10:58: completed: Generate Snowflake datasets
+2024-07-09 13:10:58: completed: Analyze all datasets
+2024-07-09 13:10:58: completed: Compare analyzed results with expectations
+2024-07-09 13:10:58: completed: Display results of Snowflake dataset analyzes
+2024-07-09 13:10:58: end
+
+2024-07-09 13:12:22: start
+2024-07-09 13:12:25: completed: Load data from a .json file
+2024-07-09 13:12:27: completed: Establish a connection to Snowflake
+2024-07-09 13:12:37: completed: Generate Snowflake datasets
+2024-07-09 13:12:37: completed: Analyze all datasets
+2024-07-09 13:12:37: completed: Compare analyzed results with expectations
+2024-07-09 13:12:37: completed: Display results of Snowflake dataset analyzes
+2024-07-09 13:12:37: end
+
+2024-07-09 13:27:17: start
+2024-07-09 13:27:20: completed: Load data from a .json file
+2024-07-09 13:27:22: completed: Establish a connection to Snowflake
+2024-07-09 13:27:32: completed: Generate Snowflake datasets
+2024-07-09 13:27:32: completed: Analyze all datasets
+2024-07-09 13:27:32: completed: Compare analyzed results with expectations
+2024-07-09 13:28:11: start
+2024-07-09 13:28:13: completed: Load data from a .json file
+2024-07-09 13:28:15: completed: Establish a connection to Snowflake
+2024-07-09 13:28:22: completed: Generate Snowflake datasets
+2024-07-09 13:28:22: completed: Analyze all datasets
+2024-07-09 13:28:22: completed: Compare analyzed results with expectations
+2024-07-09 13:41:07: start
+2024-07-09 13:41:08: completed: Load data from a .json file
+2024-07-09 13:41:11: completed: Establish a connection to Snowflake
+2024-07-09 13:41:19: completed: Generate Snowflake datasets
+2024-07-09 13:41:19: completed: Analyze all datasets
+2024-07-09 13:41:19: completed: Compare analyzed results with expectations
+2024-07-09 13:43:29: start
+2024-07-09 13:43:30: completed: Load data from a .json file
+2024-07-09 13:43:33: completed: Establish a connection to Snowflake
+2024-07-09 13:43:40: completed: Generate Snowflake datasets
+2024-07-09 13:43:40: completed: Analyze all datasets
+2024-07-09 13:43:40: completed: Compare analyzed results with expectations
+2024-07-09 13:44:16: start
+2024-07-09 13:44:17: completed: Load data from a .json file
+2024-07-09 13:44:20: completed: Establish a connection to Snowflake
+2024-07-09 13:44:28: completed: Generate Snowflake datasets
+2024-07-09 13:44:28: completed: Analyze all datasets
+2024-07-09 13:44:28: completed: Compare analyzed results with expectations
+2024-07-09 13:44:49: start
+2024-07-09 13:44:50: completed: Load data from a .json file
+2024-07-09 13:44:53: completed: Establish a connection to Snowflake
+2024-07-09 13:45:02: completed: Generate Snowflake datasets
+2024-07-09 13:45:02: completed: Analyze all datasets
+2024-07-09 13:45:02: completed: Compare analyzed results with expectations
+2024-07-09 13:46:49: start
+2024-07-09 13:46:51: completed: Load data from a .json file
+2024-07-09 13:46:53: completed: Establish a connection to Snowflake
+2024-07-09 13:47:02: completed: Generate Snowflake datasets
+2024-07-09 13:47:02: completed: Analyze all datasets
+2024-07-09 13:47:02: completed: Compare analyzed results with expectations
+2024-07-09 13:48:27: start
+2024-07-09 13:48:29: completed: Load data from a .json file
+2024-07-09 13:48:31: completed: Establish a connection to Snowflake
+2024-07-09 13:48:39: completed: Generate Snowflake datasets
+2024-07-09 13:48:39: completed: Analyze all datasets
+2024-07-09 13:48:39: completed: Compare analyzed results with expectations
+2024-07-09 13:49:36: start
+2024-07-09 13:49:38: completed: Load data from a .json file
+2024-07-09 13:49:40: completed: Establish a connection to Snowflake
+2024-07-09 13:49:50: completed: Generate Snowflake datasets
+2024-07-09 13:49:50: completed: Analyze all datasets
+2024-07-09 13:49:50: completed: Compare analyzed results with expectations
+2024-07-09 13:51:19: start
+2024-07-09 13:51:21: completed: Load data from a .json file
+2024-07-09 13:51:23: completed: Establish a connection to Snowflake
+2024-07-09 13:51:32: completed: Generate Snowflake datasets
+2024-07-09 13:51:32: completed: Analyze all datasets
+2024-07-09 13:51:32: completed: Compare analyzed results with expectations
+2024-07-09 13:52:18: start
+2024-07-09 13:52:20: completed: Load data from a .json file
+2024-07-09 13:52:22: completed: Establish a connection to Snowflake
+2024-07-09 13:52:30: completed: Generate Snowflake datasets
+2024-07-09 13:52:30: completed: Analyze all datasets
+2024-07-09 13:52:30: completed: Compare analyzed results with expectations
+2024-07-09 13:53:45: start
+2024-07-09 13:53:46: completed: Load data from a .json file
+2024-07-09 13:53:49: completed: Establish a connection to Snowflake
+2024-07-09 13:53:56: completed: Generate Snowflake datasets
+2024-07-09 13:53:56: completed: Analyze all datasets
+2024-07-09 13:53:56: completed: Compare analyzed results with expectations
+2024-07-09 13:54:30: start
+2024-07-09 13:54:32: completed: Load data from a .json file
+2024-07-09 13:54:35: completed: Establish a connection to Snowflake
+2024-07-09 13:54:42: completed: Generate Snowflake datasets
+2024-07-09 13:54:42: completed: Analyze all datasets
+2024-07-09 13:54:42: completed: Compare analyzed results with expectations
+2024-07-09 13:58:46: start
+2024-07-09 13:58:48: completed: Load data from a .json file
+2024-07-09 13:58:53: completed: Establish a connection to Snowflake
+2024-07-09 13:59:00: completed: Generate Snowflake datasets
+2024-07-09 14:00:12: start
+2024-07-09 14:00:14: completed: Load data from a .json file
+2024-07-09 14:00:17: completed: Establish a connection to Snowflake
+2024-07-09 14:00:25: completed: Generate Snowflake datasets
+2024-07-09 14:00:26: completed: Analyze all datasets
+2024-07-09 14:00:26: completed: Compare analyzed results with expectations
+2024-07-09 14:00:26: completed: Display results of Snowflake dataset analyzes
+2024-07-09 14:00:26: end
+
+2024-07-09 14:03:58: start
+2024-07-09 14:04:00: completed: Load data from a .json file
+2024-07-09 14:04:03: completed: Establish a connection to Snowflake
+2024-07-09 14:04:18: completed: Generate Snowflake datasets
+2024-07-09 14:04:27: completed: Analyze all datasets
+2024-07-09 14:06:57: completed: Compare analyzed results with expectations
+2024-07-09 14:07:08: start
+2024-07-09 14:07:10: completed: Load data from a .json file
+2024-07-09 14:07:14: completed: Establish a connection to Snowflake
+2024-07-09 14:07:26: completed: Generate Snowflake datasets
+2024-07-09 14:07:26: completed: Analyze all datasets
+2024-07-09 14:12:51: start
+2024-07-09 14:12:53: completed: Load data from a .json file
+2024-07-09 14:12:56: completed: Establish a connection to Snowflake
+2024-07-09 14:13:02: completed: Generate Snowflake datasets
+2024-07-09 14:13:02: completed: Analyze all datasets
+2024-07-09 14:13:02: completed: Compare analyzed results with expectations
+2024-07-09 14:13:09: start
+2024-07-09 14:13:10: completed: Load data from a .json file
+2024-07-09 14:13:13: completed: Establish a connection to Snowflake
+2024-07-09 14:13:20: completed: Generate Snowflake datasets
+2024-07-09 14:13:20: completed: Analyze all datasets
+2024-07-09 14:16:37: start
+2024-07-09 14:16:38: completed: Load data from a .json file
+2024-07-09 14:16:41: completed: Establish a connection to Snowflake
+2024-07-09 14:16:49: completed: Generate Snowflake datasets
+2024-07-09 14:16:49: completed: Analyze all datasets
+2024-07-09 14:17:47: start
+2024-07-09 14:17:49: completed: Load data from a .json file
+2024-07-09 14:17:52: completed: Establish a connection to Snowflake
+2024-07-09 14:18:08: completed: Generate Snowflake datasets
+2024-07-09 14:18:08: completed: Analyze all datasets
+2024-07-09 14:18:49: start
+2024-07-09 14:18:53: completed: Load data from a .json file
+2024-07-09 14:18:55: completed: Establish a connection to Snowflake
+2024-07-09 14:19:02: completed: Generate Snowflake datasets
+2024-07-09 14:19:02: completed: Analyze all datasets
+2024-07-09 14:26:59: start
+2024-07-09 14:27:01: completed: Load data from a .json file
+2024-07-09 14:27:03: completed: Establish a connection to Snowflake
+2024-07-09 14:27:12: completed: Generate Snowflake datasets
+2024-07-09 14:27:12: completed: Analyze all datasets
+2024-07-09 14:30:34: start
+2024-07-09 14:30:35: completed: Load data from a .json file
+2024-07-09 14:30:38: completed: Establish a connection to Snowflake
+2024-07-09 14:30:46: completed: Generate Snowflake datasets
+2024-07-09 14:30:46: completed: Analyze all datasets
+2024-07-09 14:31:10: start
+2024-07-09 14:31:12: completed: Load data from a .json file
+2024-07-09 14:31:14: completed: Establish a connection to Snowflake
+2024-07-09 14:31:22: completed: Generate Snowflake datasets
+2024-07-09 14:31:22: completed: Analyze all datasets
+2024-07-09 14:32:09: start
+2024-07-09 14:32:11: completed: Load data from a .json file
+2024-07-09 14:32:13: completed: Establish a connection to Snowflake
+2024-07-09 14:32:23: completed: Generate Snowflake datasets
+2024-07-09 14:32:23: completed: Analyze all datasets
+2024-07-09 14:36:46: start
+2024-07-09 14:36:48: completed: Load data from a .json file
+2024-07-09 14:36:51: completed: Establish a connection to Snowflake
+2024-07-09 14:36:57: completed: Generate Snowflake datasets
+2024-07-09 14:36:57: completed: Analyze all datasets
+2024-07-09 14:36:57: completed: Compare analyzed results with expectations
+2024-07-09 14:36:57: completed: Display results of Snowflake dataset analyzes
+2024-07-09 14:36:57: end
+
+2024-07-09 14:41:23: start
+2024-07-09 14:41:24: completed: Load data from a .json file
+2024-07-09 14:41:27: completed: Establish a connection to Snowflake
+2024-07-09 14:41:34: completed: Generate Snowflake datasets
+2024-07-09 14:41:34: completed: Analyze all datasets
+2024-07-09 14:41:34: completed: Compare analyzed results with expectations
+2024-07-09 14:41:57: start
+2024-07-09 14:41:58: completed: Load data from a .json file
+2024-07-09 14:42:01: completed: Establish a connection to Snowflake
+2024-07-09 14:42:09: completed: Generate Snowflake datasets
+2024-07-09 14:42:09: completed: Analyze all datasets
+2024-07-09 14:43:35: completed: Compare analyzed results with expectations
+2024-07-09 14:45:12: start
+2024-07-09 14:45:13: completed: Load data from a .json file
+2024-07-09 14:45:15: completed: Establish a connection to Snowflake
+2024-07-09 14:45:22: completed: Generate Snowflake datasets
+2024-07-09 14:45:22: completed: Analyze all datasets
+2024-07-09 14:45:22: completed: Compare analyzed results with expectations
+2024-07-09 14:45:30: start
+2024-07-09 14:45:33: completed: Load data from a .json file
+2024-07-09 14:45:35: completed: Establish a connection to Snowflake
+2024-07-09 14:45:47: completed: Generate Snowflake datasets
+2024-07-09 14:45:47: completed: Analyze all datasets
+2024-07-09 14:45:47: completed: Compare analyzed results with expectations
+2024-07-09 14:45:47: completed: Display results of Snowflake dataset analyzes
+2024-07-09 14:45:47: end
+
+2024-07-09 14:46:47: start
+2024-07-09 14:46:50: completed: Load data from a .json file
+2024-07-09 14:46:53: completed: Establish a connection to Snowflake
+2024-07-09 14:47:01: completed: Generate Snowflake datasets
+2024-07-09 14:47:01: completed: Analyze all datasets
+2024-07-09 14:47:01: completed: Compare analyzed results with expectations
+2024-07-09 14:48:54: start
+2024-07-09 14:48:56: completed: Load data from a .json file
+2024-07-09 14:48:59: completed: Establish a connection to Snowflake
+2024-07-09 14:49:08: completed: Generate Snowflake datasets
+2024-07-09 14:49:08: completed: Analyze all datasets
+2024-07-09 14:49:08: completed: Compare analyzed results with expectations
+2024-07-09 14:52:35: start
+2024-07-09 14:52:43: completed: Load data from a .json file
+2024-07-09 14:52:46: completed: Establish a connection to Snowflake
+2024-07-09 14:52:54: completed: Generate Snowflake datasets
+2024-07-09 14:52:54: completed: Analyze all datasets
+2024-07-09 14:54:19: start
+2024-07-09 14:54:20: completed: Load data from a .json file
+2024-07-09 14:54:23: completed: Establish a connection to Snowflake
+2024-07-09 14:54:33: completed: Generate Snowflake datasets
+2024-07-09 14:54:33: completed: Analyze all datasets
+2024-07-09 15:11:00: start
+2024-07-09 15:11:01: completed: Load data from a .json file
+2024-07-09 15:11:04: completed: Establish a connection to Snowflake
+2024-07-09 15:11:12: completed: Generate Snowflake datasets
+2024-07-09 15:11:12: completed: Analyze all datasets
+2024-07-09 15:11:12: completed: Compare analyzed results with expectations
+2024-07-09 15:11:41: start
+2024-07-09 15:11:43: completed: Load data from a .json file
+2024-07-09 15:11:46: completed: Establish a connection to Snowflake
+2024-07-09 15:11:57: completed: Generate Snowflake datasets
+2024-07-09 15:11:57: completed: Analyze all datasets
+2024-07-09 15:11:57: completed: Compare analyzed results with expectations
+2024-07-09 15:16:37: start
+2024-07-09 15:16:39: completed: Load data from a .json file
+2024-07-09 15:16:41: completed: Establish a connection to Snowflake
+2024-07-09 15:16:58: completed: Generate Snowflake datasets
+2024-07-09 15:16:58: completed: Analyze all datasets
+2024-07-09 15:16:58: completed: Compare analyzed results with expectations
+2024-07-09 15:17:03: completed: Display results of Snowflake dataset analyzes
+2024-07-09 15:17:03: end
+
+2024-07-09 15:29:41: start
+2024-07-09 15:29:43: completed: Load data from a .json file
+2024-07-09 15:29:45: completed: Establish a connection to Snowflake
+2024-07-09 15:29:54: completed: Generate Snowflake datasets
+2024-07-09 15:29:54: completed: Analyze all datasets
+2024-07-09 15:29:54: completed: Compare analyzed results with expectations
+2024-07-09 15:30:17: start
+2024-07-09 15:30:18: completed: Load data from a .json file
+2024-07-09 15:30:21: completed: Establish a connection to Snowflake
+2024-07-09 15:30:28: completed: Generate Snowflake datasets
+2024-07-09 15:30:28: completed: Analyze all datasets
+2024-07-09 15:30:28: completed: Compare analyzed results with expectations
+2024-07-09 15:30:28: completed: Display results of Snowflake dataset analyzes
+2024-07-09 15:30:28: end
+
+2024-07-09 16:07:32: start
+2024-07-09 16:07:38: completed: Load data from a .json file
+2024-07-09 16:07:41: completed: Establish a connection to Snowflake
+2024-07-09 16:07:49: completed: Generate Snowflake datasets
+2024-07-09 16:07:49: completed: Analyze all datasets
+2024-07-09 16:07:49: completed: Compare analyzed results with expectations
+2024-07-09 16:07:49: completed: Display results of Snowflake dataset analyzes
+2024-07-09 16:07:49: end
+
+2024-07-09 16:09:21: start
+2024-07-09 16:09:22: completed: Load data from a .json file
+2024-07-09 16:09:25: completed: Establish a connection to Snowflake
+2024-07-09 16:09:33: completed: Generate Snowflake datasets
+2024-07-09 16:09:33: completed: Analyze all datasets
+2024-07-09 16:09:33: completed: Compare analyzed results with expectations
+2024-07-09 16:09:33: completed: Display results of Snowflake dataset analyzes
+2024-07-09 16:09:33: end
+
+2024-07-09 16:10:44: start
+2024-07-09 16:10:46: completed: Load data from a .json file
+2024-07-09 16:10:49: completed: Establish a connection to Snowflake
+2024-07-09 16:10:58: completed: Generate Snowflake datasets
+2024-07-09 16:10:58: completed: Analyze all datasets
+2024-07-09 16:10:58: completed: Compare analyzed results with expectations
+2024-07-09 16:10:58: completed: Display results of Snowflake dataset analyzes
+2024-07-09 16:10:58: end
+
+2024-07-09 16:11:24: start
+2024-07-09 16:11:25: completed: Load data from a .json file
+2024-07-09 16:11:28: completed: Establish a connection to Snowflake
+2024-07-09 16:11:37: completed: Generate Snowflake datasets
+2024-07-09 16:11:37: completed: Analyze all datasets
+2024-07-09 16:11:37: completed: Compare analyzed results with expectations
+2024-07-09 16:11:37: completed: Display results of Snowflake dataset analyzes
+2024-07-09 16:11:37: end
+
+2024-07-09 16:14:15: start
+2024-07-09 16:14:16: completed: Load data from a .json file
+2024-07-09 16:14:18: completed: Establish a connection to Snowflake
+2024-07-09 16:14:25: completed: Generate Snowflake datasets
+2024-07-09 16:14:25: completed: Analyze all datasets
+2024-07-09 16:14:47: start
+2024-07-09 16:14:49: completed: Load data from a .json file
+2024-07-09 16:14:52: completed: Establish a connection to Snowflake
+2024-07-09 16:14:59: completed: Generate Snowflake datasets
+2024-07-09 16:14:59: completed: Analyze all datasets
+2024-07-09 16:14:59: completed: Compare analyzed results with expectations
+2024-07-09 16:14:59: completed: Display results of Snowflake dataset analyzes
+2024-07-09 16:14:59: end
+
+2024-07-09 16:15:59: start
+2024-07-09 16:16:08: completed: Load data from a .json file
+2024-07-09 16:16:10: completed: Establish a connection to Snowflake
+2024-07-09 16:16:17: completed: Generate Snowflake datasets
+2024-07-09 16:16:17: completed: Analyze all datasets
+2024-07-09 16:16:17: completed: Compare analyzed results with expectations
+2024-07-09 16:16:17: completed: Display results of Snowflake dataset analyzes
+2024-07-09 16:16:17: end
+
+2024-07-10 11:10:55: start
+2024-07-10 11:11:16: completed: Load data from a .json file
+2024-07-10 11:11:29: completed: Establish a connection to Snowflake
+2024-07-10 11:11:50: completed: Generate Snowflake datasets
+2024-07-10 11:11:50: completed: Analyze all datasets
+2024-07-10 11:11:50: completed: Compare analyzed results with expectations
+2024-07-10 11:11:50: completed: Display results of Snowflake dataset analyzes
+2024-07-10 11:11:50: end
+
+2024-07-10 11:30:15: start
+2024-07-10 11:30:25: completed: Load data from a .json file
+2024-07-10 11:30:58: completed: Establish a connection to Snowflake
+2024-07-10 11:31:10: completed: Generate Snowflake datasets
+2024-07-10 11:31:11: completed: Analyze all datasets
+2024-07-10 11:31:11: completed: Compare analyzed results with expectations
+2024-07-10 11:31:11: completed: Display results of Snowflake dataset analyzes
+2024-07-10 11:31:11: end
+
+2024-07-10 12:46:29: start
+2024-07-10 12:46:31: completed: Load data from a .json file
+2024-07-10 12:46:34: completed: Establish a connection to Snowflake
+2024-07-10 12:46:42: completed: Generate Snowflake datasets
+2024-07-10 12:46:42: completed: Analyze all datasets
+2024-07-10 12:46:42: completed: Compare analyzed results with expectations
+2024-07-10 12:46:42: completed: Display results of Snowflake dataset analyzes
+2024-07-10 12:46:42: end
+
+2024-07-10 12:46:54: start
+2024-07-10 12:46:56: completed: Load data from a .json file
+2024-07-10 12:46:58: completed: Establish a connection to Snowflake
+2024-07-10 12:47:04: completed: Generate Snowflake datasets
+2024-07-10 12:47:04: completed: Analyze all datasets
+2024-07-10 12:47:04: completed: Compare analyzed results with expectations
+2024-07-10 12:47:04: completed: Display results of Snowflake dataset analyzes
+2024-07-10 12:47:04: end
+
+2024-07-10 13:05:20: start
+2024-07-10 13:05:22: completed: Load data from a .json file
+2024-07-10 13:05:26: completed: Establish a connection to Snowflake
+2024-07-10 13:05:36: completed: Generate Snowflake datasets
+2024-07-10 13:05:36: completed: Analyze all datasets
+2024-07-10 13:05:36: completed: Compare analyzed results with expectations
+2024-07-10 13:08:29: start
+2024-07-10 13:08:31: completed: Load data from a .json file
+2024-07-10 13:08:33: completed: Establish a connection to Snowflake
+2024-07-10 13:08:44: completed: Generate Snowflake datasets
+2024-07-10 13:08:44: completed: Analyze all datasets
+2024-07-10 13:08:44: completed: Compare analyzed results with expectations
+2024-07-10 13:08:44: completed: Display results of Snowflake dataset analyzes
+2024-07-10 13:08:44: end
+
+2024-07-10 13:23:49: start
+2024-07-10 13:23:50: completed: Load data from a .json file
+2024-07-10 13:23:54: completed: Establish a connection to Snowflake
+2024-07-10 13:24:01: completed: Generate Snowflake datasets
+2024-07-10 13:24:01: completed: Analyze all datasets
+2024-07-10 13:24:01: completed: Compare analyzed results with expectations
+2024-07-10 13:24:01: completed: Display results of Snowflake dataset analyzes
+2024-07-10 13:24:01: end
+
+2024-07-10 13:32:32: start
+2024-07-10 13:32:33: completed: Load data from a .json file
+2024-07-10 13:32:36: completed: Establish a connection to Snowflake
+2024-07-10 13:32:42: completed: Generate Snowflake datasets
+2024-07-10 13:32:42: completed: Analyze all datasets
+2024-07-10 13:32:42: completed: Compare analyzed results with expectations
+2024-07-10 13:32:52: start
+2024-07-10 13:32:53: completed: Load data from a .json file
+2024-07-10 13:32:56: completed: Establish a connection to Snowflake
+2024-07-10 13:33:06: completed: Generate Snowflake datasets
+2024-07-10 13:33:06: completed: Analyze all datasets
+2024-07-10 13:33:06: completed: Compare analyzed results with expectations
+2024-07-10 13:33:06: completed: Display results of Snowflake dataset analyzes
+2024-07-10 13:33:06: end
+
+2024-07-10 13:34:38: start
+2024-07-10 13:34:40: completed: Load data from a .json file
+2024-07-10 13:34:42: completed: Establish a connection to Snowflake
+2024-07-10 13:34:53: completed: Generate Snowflake datasets
+2024-07-10 13:34:53: completed: Analyze all datasets
+2024-07-10 13:34:53: completed: Compare analyzed results with expectations
+2024-07-10 13:34:53: completed: Display results of Snowflake dataset analyzes
+2024-07-10 13:34:53: end
+
+2024-07-10 13:36:19: start
+2024-07-10 13:36:21: completed: Load data from a .json file
+2024-07-10 13:36:23: completed: Establish a connection to Snowflake
+2024-07-10 13:36:31: completed: Generate Snowflake datasets
+2024-07-10 13:36:31: completed: Analyze all datasets
+2024-07-10 13:36:31: completed: Compare analyzed results with expectations
+2024-07-10 13:37:12: start
+2024-07-10 13:37:14: completed: Load data from a .json file
+2024-07-10 13:37:17: completed: Establish a connection to Snowflake
+2024-07-10 13:37:24: completed: Generate Snowflake datasets
+2024-07-10 13:37:24: completed: Analyze all datasets
+2024-07-10 13:37:24: completed: Compare analyzed results with expectations
+2024-07-10 13:37:24: completed: Display results of Snowflake dataset analyzes
+2024-07-10 13:37:24: end
+
+2024-07-10 16:27:15: start
+2024-07-10 16:27:17: completed: Load data from a .json file
+2024-07-10 16:27:20: completed: Establish a connection to Snowflake
+2024-07-10 16:27:30: completed: Generate Snowflake datasets
+2024-07-10 16:27:30: completed: Analyze all datasets
+2024-07-10 16:27:30: completed: Compare analyzed results with expectations
+2024-07-10 16:27:30: completed: Display results of Snowflake dataset analyzes
+2024-07-10 16:27:30: end
+
+2024-07-10 16:27:46: start
+2024-07-10 16:27:47: completed: Load data from a .json file
+2024-07-10 16:27:50: completed: Establish a connection to Snowflake
+2024-07-10 16:27:57: completed: Generate Snowflake datasets
+2024-07-10 16:27:57: completed: Analyze all datasets
+2024-07-10 16:27:57: completed: Compare analyzed results with expectations
+2024-07-10 16:28:32: start
+2024-07-10 16:28:34: completed: Load data from a .json file
+2024-07-10 16:28:36: completed: Establish a connection to Snowflake
+2024-07-10 16:28:44: completed: Generate Snowflake datasets
+2024-07-10 16:28:44: completed: Analyze all datasets
+2024-07-10 16:28:44: completed: Compare analyzed results with expectations
+2024-07-10 16:30:09: start
+2024-07-10 16:30:10: completed: Load data from a .json file
+2024-07-10 16:30:13: completed: Establish a connection to Snowflake
+2024-07-10 16:30:20: completed: Generate Snowflake datasets
+2024-07-10 16:30:20: completed: Analyze all datasets
+2024-07-10 16:30:20: completed: Compare analyzed results with expectations
+2024-07-10 16:30:20: completed: Display results of Snowflake dataset analyzes
+2024-07-10 16:30:20: end
+
+2024-07-10 16:31:07: start
+2024-07-10 16:31:08: completed: Load data from a .json file
+2024-07-10 16:31:10: completed: Establish a connection to Snowflake
+2024-07-10 16:31:19: completed: Generate Snowflake datasets
+2024-07-10 16:31:19: completed: Analyze all datasets
+2024-07-10 16:31:19: completed: Compare analyzed results with expectations
+2024-07-10 16:31:19: completed: Display results of Snowflake dataset analyzes
+2024-07-10 16:31:19: end
+
+2024-07-10 16:32:34: start
+2024-07-10 16:32:36: completed: Load data from a .json file
+2024-07-10 16:32:39: completed: Establish a connection to Snowflake
+2024-07-10 16:32:46: completed: Generate Snowflake datasets
+2024-07-10 16:32:46: completed: Analyze all datasets
+2024-07-10 16:32:46: completed: Compare analyzed results with expectations
+2024-07-10 16:32:46: completed: Display results of Snowflake dataset analyzes
+2024-07-10 16:32:46: end
+
+2024-07-10 16:33:04: start
+2024-07-10 16:33:09: completed: Load data from a .json file
+2024-07-10 16:33:11: completed: Establish a connection to Snowflake
+2024-07-10 16:33:19: completed: Generate Snowflake datasets
+2024-07-10 16:33:19: completed: Analyze all datasets
+2024-07-10 16:33:19: completed: Compare analyzed results with expectations
+2024-07-10 16:33:19: completed: Display results of Snowflake dataset analyzes
+2024-07-10 16:33:19: end
+
+2024-07-12 11:40:34: start
+2024-07-12 11:40:35: completed: Load data from a .json file
+2024-07-12 11:40:39: completed: Establish a connection to Snowflake
+2024-07-12 11:40:50: completed: Generate Snowflake datasets
+2024-07-12 11:40:50: completed: Analyze all datasets
+2024-07-12 11:40:50: completed: Compare analyzed results with expectations
+2024-07-12 11:40:50: completed: Display results of Snowflake dataset analyzes
+2024-07-12 11:40:50: end
+
+2024-07-12 11:56:44: start
+2024-07-12 11:56:46: completed: Load data from a .json file
+2024-07-12 11:56:49: completed: Establish a connection to Snowflake
+2024-07-12 11:56:57: completed: Generate Snowflake datasets
+2024-07-12 11:56:57: completed: Analyze all datasets
+2024-07-12 11:56:57: completed: Compare analyzed results with expectations
+2024-07-12 12:01:48: start
+2024-07-12 12:01:49: completed: Load data from a .json file
+2024-07-12 12:01:52: completed: Establish a connection to Snowflake
+2024-07-12 12:02:00: completed: Generate Snowflake datasets
+2024-07-12 12:02:00: completed: Analyze all datasets
+2024-07-12 12:02:00: completed: Compare analyzed results with expectations
+2024-07-12 12:42:22: start
+2024-07-12 12:42:24: completed: Load data from a .json file
+2024-07-12 12:42:28: completed: Establish a connection to Snowflake
+2024-07-12 12:42:36: completed: Generate Snowflake datasets
+2024-07-12 12:42:36: completed: Analyze all datasets
+2024-07-12 12:42:36: completed: Compare analyzed results with expectations
+2024-07-12 12:44:11: start
+2024-07-12 12:44:12: completed: Load data from a .json file
+2024-07-12 12:44:15: completed: Establish a connection to Snowflake
+2024-07-12 12:44:23: completed: Generate Snowflake datasets
+2024-07-12 12:44:23: completed: Analyze all datasets
+2024-07-12 12:44:23: completed: Compare analyzed results with expectations
+2024-07-12 12:44:56: start
+2024-07-12 12:44:59: completed: Load data from a .json file
+2024-07-12 12:45:02: completed: Establish a connection to Snowflake
+2024-07-12 12:45:09: completed: Generate Snowflake datasets
+2024-07-12 12:45:09: completed: Analyze all datasets
+2024-07-12 12:45:09: completed: Compare analyzed results with expectations
+2024-07-12 14:13:41: start
+2024-07-12 14:13:42: completed: Load data from a .json file
+2024-07-12 14:13:45: completed: Establish a connection to Snowflake
+2024-07-12 14:13:53: completed: Generate Snowflake datasets
+2024-07-12 14:13:53: completed: Analyze all datasets
+2024-07-12 14:13:53: completed: Compare analyzed results with expectations
+2024-07-12 14:14:35: start
+2024-07-12 14:14:38: completed: Load data from a .json file
+2024-07-12 14:14:40: completed: Establish a connection to Snowflake
+2024-07-12 14:14:49: completed: Generate Snowflake datasets
+2024-07-12 14:14:49: completed: Analyze all datasets
+2024-07-12 14:14:49: completed: Compare analyzed results with expectations
+2024-07-12 14:16:56: start
+2024-07-12 14:16:58: completed: Load data from a .json file
+2024-07-12 14:17:00: completed: Establish a connection to Snowflake
+2024-07-12 14:17:09: completed: Generate Snowflake datasets
+2024-07-12 14:17:10: completed: Analyze all datasets
+2024-07-12 14:17:10: completed: Compare analyzed results with expectations
+2024-07-12 14:19:34: start
+2024-07-12 14:19:35: completed: Load data from a .json file
+2024-07-12 14:19:38: completed: Establish a connection to Snowflake
+2024-07-12 14:19:45: completed: Generate Snowflake datasets
+2024-07-12 14:19:45: completed: Analyze all datasets
+2024-07-12 14:19:45: completed: Compare analyzed results with expectations
+2024-07-12 14:20:37: start
+2024-07-12 14:20:38: completed: Load data from a .json file
+2024-07-12 14:20:41: completed: Establish a connection to Snowflake
+2024-07-12 14:20:47: completed: Generate Snowflake datasets
+2024-07-12 14:20:47: completed: Analyze all datasets
+2024-07-12 14:20:47: completed: Compare analyzed results with expectations
+2024-07-12 14:36:38: start
+2024-07-12 14:36:40: completed: Load data from a .json file
+2024-07-12 14:36:44: completed: Establish a connection to Snowflake
+2024-07-12 14:36:52: completed: Generate Snowflake datasets
+2024-07-12 14:36:53: completed: Analyze all datasets
+2024-07-12 14:36:53: completed: Compare analyzed results with expectations
+2024-07-12 14:36:53: completed: Display results of Snowflake dataset analyzes
+2024-07-12 14:36:53: end
+
+2024-07-12 14:54:07: start
+2024-07-12 14:54:09: completed: Load data from a .json file
+2024-07-12 14:54:12: completed: Establish a connection to Snowflake
+2024-07-12 14:54:27: completed: Generate Snowflake datasets
+2024-07-12 14:54:27: completed: Analyze all datasets
+2024-07-12 14:54:27: completed: Compare analyzed results with expectations
+2024-07-12 14:54:27: completed: Display results of Snowflake dataset analyzes
+2024-07-12 14:54:27: end
+
+2024-07-12 15:02:27: start
+2024-07-12 15:02:29: completed: Load data from a .json file
+2024-07-12 15:02:32: completed: Establish a connection to Snowflake
+2024-07-12 15:02:41: completed: Generate Snowflake datasets
+2024-07-12 15:02:41: completed: Analyze all datasets
+2024-07-12 15:02:41: completed: Compare analyzed results with expectations
+2024-07-12 15:02:41: completed: Display results of Snowflake dataset analyzes
+2024-07-12 15:02:41: end
+
+2024-07-12 15:05:11: start
+2024-07-12 15:05:13: completed: Load data from a .json file
+2024-07-12 15:05:16: completed: Establish a connection to Snowflake
+2024-07-12 15:05:25: completed: Generate Snowflake datasets
+2024-07-12 15:05:25: completed: Analyze all datasets
+2024-07-12 15:05:25: completed: Compare analyzed results with expectations
+2024-07-12 15:08:37: start
+2024-07-12 15:08:42: completed: Load data from a .json file
+2024-07-12 15:08:46: completed: Establish a connection to Snowflake
+2024-07-12 15:08:53: completed: Generate Snowflake datasets
+2024-07-12 15:08:53: completed: Analyze all datasets
+2024-07-12 15:08:53: completed: Compare analyzed results with expectations
+2024-07-12 15:09:37: start
+2024-07-12 15:09:39: completed: Load data from a .json file
+2024-07-12 15:09:42: completed: Establish a connection to Snowflake
+2024-07-12 15:09:52: completed: Generate Snowflake datasets
+2024-07-12 15:09:52: completed: Analyze all datasets
+2024-07-12 15:09:52: completed: Compare analyzed results with expectations
+2024-07-12 15:09:52: completed: Display results of Snowflake dataset analyzes
+2024-07-12 15:09:52: end
+
+2024-07-12 15:13:17: start
+2024-07-12 15:13:19: completed: Load data from a .json file
+2024-07-12 15:13:22: completed: Establish a connection to Snowflake
+2024-07-12 15:13:31: completed: Generate Snowflake datasets
+2024-07-12 15:13:31: completed: Analyze all datasets
+2024-07-12 15:13:31: completed: Compare analyzed results with expectations
+2024-07-12 15:13:31: completed: Display results of Snowflake dataset analyzes
+2024-07-12 15:13:31: end
+
+2024-07-12 15:23:24: start
+2024-07-12 15:23:25: completed: Load data from a .json file
+2024-07-12 15:23:28: completed: Establish a connection to Snowflake
+2024-07-12 15:23:37: completed: Generate Snowflake datasets
+2024-07-12 15:23:37: completed: Analyze all datasets
+2024-07-12 15:23:37: completed: Compare analyzed results with expectations
+2024-07-12 15:23:37: completed: Display results of Snowflake dataset analyzes
+2024-07-12 15:23:37: end
+
+2024-07-12 15:25:49: start
+2024-07-12 15:25:50: completed: Load data from a .json file
+2024-07-12 15:25:53: completed: Establish a connection to Snowflake
+2024-07-12 15:26:06: completed: Generate Snowflake datasets
+2024-07-12 15:26:07: completed: Analyze all datasets
+2024-07-12 15:26:07: completed: Compare analyzed results with expectations
+2024-07-12 15:26:07: completed: Display results of Snowflake dataset analyzes
+2024-07-12 15:26:07: end
+
+2024-07-18 11:56:04: start
+2024-07-18 11:56:06: completed: Load data from a .json file
+2024-07-18 11:56:19: completed: Establish a connection to Snowflake
+2024-07-18 11:56:32: completed: Generate Snowflake datasets
+2024-07-18 11:56:32: completed: Analyze all datasets
+2024-07-18 11:56:32: completed: Compare analyzed results with expectations
+2024-07-18 11:56:32: completed: Display results of Snowflake dataset analyzes
+2024-07-18 11:56:32: end
+
+2024-07-18 13:38:47: start
+2024-07-18 13:38:48: completed: Load data from a .json file
+2024-07-18 13:39:01: completed: Establish a connection to Snowflake
+2024-07-18 13:39:09: completed: Generate Snowflake datasets
+2024-07-18 13:39:09: completed: Analyze all datasets
+2024-07-18 13:39:09: completed: Compare analyzed results with expectations
+2024-07-18 13:39:10: completed: Display results of Snowflake dataset analyzes
+2024-07-18 13:39:10: end
+
+2024-07-18 15:57:09: start
+2024-07-18 15:57:10: completed: Load data from a .json file
+2024-07-18 15:57:23: completed: Establish a connection to Snowflake
+2024-07-18 15:57:33: completed: Generate Snowflake datasets
+2024-07-18 15:57:33: completed: Analyze all datasets
+2024-07-18 15:57:33: completed: Compare analyzed results with expectations
+2024-07-18 15:57:33: completed: Display results of Snowflake dataset analyzes
+2024-07-18 15:57:33: end
+
+2024-07-19 15:08:34: start
+2024-07-19 15:08:36: completed: Load data from a .json file
+2024-07-19 15:08:50: completed: Establish a connection to Snowflake
+2024-07-19 15:09:15: completed: Generate Snowflake datasets
+2024-07-19 15:09:15: completed: Analyze all datasets
+2024-07-19 15:09:15: completed: Compare analyzed results with expectations
+2024-07-19 15:09:15: completed: Display results of Snowflake dataset analyzes
+2024-07-19 15:09:15: end
+
+2024-07-31 14:22:36: start
+2024-07-31 14:24:06: completed: Load data from a .json file
+2024-07-31 14:24:22: completed: Establish a connection to Snowflake
+2024-07-31 14:24:32: completed: Generate Snowflake datasets
+2024-07-31 14:24:32: completed: Analyze all datasets
+2024-07-31 14:24:32: completed: Compare analyzed results with expectations
+2024-07-31 14:24:32: completed: Display results of Snowflake dataset analyzes
+2024-07-31 14:24:32: end
+
+2024-07-31 14:29:55: start
+2024-07-31 14:29:56: completed: Load data from a .json file
+2024-07-31 14:30:07: completed: Establish a connection to Snowflake
+2024-07-31 14:30:15: completed: Generate Snowflake datasets
+2024-07-31 14:30:15: completed: Analyze all datasets
+2024-07-31 14:30:15: completed: Compare analyzed results with expectations
+2024-07-31 14:30:15: completed: Display results of Snowflake dataset analyzes
+2024-07-31 14:30:15: end
+
+2024-07-31 14:32:42: start
+2024-07-31 14:32:43: completed: Load data from a .json file
+2024-07-31 14:32:55: completed: Establish a connection to Snowflake
+2024-07-31 14:33:03: completed: Generate Snowflake datasets
+2024-07-31 14:33:03: completed: Analyze all datasets
+2024-07-31 14:33:03: completed: Compare analyzed results with expectations
+2024-07-31 14:33:03: completed: Display results of Snowflake dataset analyzes
+2024-07-31 14:33:03: end
+
+2024-07-31 14:42:08: start
+2024-07-31 14:42:11: completed: Load data from a .json file
+2024-07-31 14:42:23: completed: Establish a connection to Snowflake
+2024-07-31 14:42:29: completed: Generate Snowflake datasets
+2024-07-31 14:42:29: completed: Analyze all datasets
+2024-07-31 14:42:29: completed: Compare analyzed results with expectations
+2024-07-31 14:42:29: completed: Display results of Snowflake dataset analyzes
+2024-07-31 14:42:29: end
+
