@@ -6,23 +6,23 @@
 # Dependencies: b_settings, pandas
 
 
-# import packages and modules
+# Import packages and modules
 import b_settings.global_variables as st_gv
 import pandas as pd
 
 
-# generate Snowflake datasets from a .json file
+# Generate Snowflake datasets from a .json file
 def generate_snowflake_datasets(json_dict):
-    # iterate through dictionaries from the chosen .json file
+    # Iterate through dictionaries from the chosen .json file
     for key_level_0, value_level_0 in json_dict.items():
-        # iterate through the 1st level of sub-dictionaries
+        # Iterate through the 1st level of sub-dictionaries
         for value_level_1 in value_level_0:
-            # generate select statement
+            # Generate select statement
             select_columns = ', '.join(value_level_1['dim_cols'] + value_level_1['fact_cols'])
             select_object = '.'.join(value_level_1['database'] + value_level_1['schema'] + value_level_1['object'])
             select_statement = f'select {select_columns} from {select_object}'
 
-            # prepare data to be returned to all individual keys of dataset_dict
+            # Prepare data to be returned to all individual keys of dataset_dict
             st_gv.dataset_dict['datasets'].append(pd.read_sql(select_statement, value_level_1['connection']))
             value_level_1['connection'].close()      # close Snowflake connection because dataframe is ready
             st_gv.dataset_dict['object_names'].append(key_level_0)

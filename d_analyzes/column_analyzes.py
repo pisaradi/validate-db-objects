@@ -34,6 +34,9 @@ def __execute_analysis(over, analysis, order) -> dict:       ## __ = private met
             return {f'{analysis} of {over}': f'NaN (reason: non numeric data type)'}    # NaN = Not a Number
     elif analysis == 'max':
         return {f'{analysis} of {over}': st_gv.dataset_dict['datasets'][order].loc[:, over].agg(analysis)}
+    elif analysis == 'is_unique':
+        column_data = st_gv.dataset_dict['datasets'][order].loc[:, over]
+        return {f'{analysis} in {over}': column_data.nunique() == len(column_data)}
     elif analysis == 'unique':
         return {f'{analysis} in {over}': st_gv.dataset_dict['datasets'][order].loc[:, over].agg(analysis).tolist()}
     elif analysis == 'count_of_nulls':

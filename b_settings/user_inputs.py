@@ -7,7 +7,7 @@
 
 
 # import packages and modules
-import inspect, os
+import os
 import json                 # to work with .json files
 import tkinter as tk
 from   tkinter import ttk
@@ -17,13 +17,11 @@ global_json_path = ''       # a technique without global variable is more comple
 
 
 # allow a user to select a user input .json file
-def get_file_to_process():
+def get_file_to_process(parent_dir_path):
     # specify connection to a global variable
     global global_json_path
 
     # evaluate the correct input directory
-    current_dir_path = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
-    parent_dir_path = os.path.dirname(current_dir_path)
     input_dir_path = os.path.join(parent_dir_path, 'a_inputs')
 
     # if a non-empty folder exists, save user input file names (or folder names if files do not exist) and user input file paths

@@ -7,5 +7,9 @@ zvážiť testy na referenčnú integritu
 zvážiť/skontrolovať ochrany na neexistenciu objektu zadaného v JSONe (ale asi na to mám error handling)
 keď tu budem mať aj Change Type, tak do readme.md zapíšem akceptovateľné hodnoty a čo tie hodnoty znamenajú
 nahrať na github hlave kvôli readme.md
+Nachystám nejaký .json, kde si užívateľ zadá:
+            account   = 'resideo-edh.privatelink',  # account name (it does not include the snowflakecomputing.com suffix),
+            user      = 'peter.pisar@adiglobal.com',
+stĺpec FLAG v Snowflake premenujem na SUCCESS_FLAG
 možno pridať: test referenčnej integrity
 možno pridať: test of composite key

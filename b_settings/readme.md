@@ -63,11 +63,12 @@
 | table_analyzes  | count_of_rows    | Count of rows in a table                                                     |
 |                 | count_of_columns | Count of columns in a table                                                  |
 |                 | count_of_nulls   | Count of null values in a table                                              |
-|                 | candidate_keys   | Determine candidate keys;                                                    |
-|                 |                  | If a candidate key doesn't exist, then a primary key doesn't exist.          |
+|                 | candidate_keys   | Columns that are candidate keys                                              |
+|                 |                  | If a candidate key doesn't exist, then a primary key doesn't exist           |
 | column_analyzes | min              | Minimum value in a selected column (is null included?)                       |
 |                 | avg              | Average value in a selected column (is null included?)                       |
 |                 | max              | Maximum value in a selected column (is null included?)                       |
+|                 | is_unique        | Value 0 indicates the presence of duplicates, value 1 indicates uniqueness.  |
 |                 | unique           | List of distinct (unique) values in a selected column                        |
 |                 | count_of_nulls   | Count of null values in a selected column                                    |
 | expectations    | table_analyzes   | Any expectations (not only from options) for table analyzes                  |

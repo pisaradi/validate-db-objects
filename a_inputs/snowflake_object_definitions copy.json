@@ -16,7 +16,8 @@
         "table_analyzes":  ["candidate_keys", "count_of_columns"],
         "column_analyzes": {
                                 "COUNTRY_ID": ["avg"], "REGION_ORD_NUM": ["min", "avg", "max"],
-                                "CURRENCY_CODE": ["unique"], "IS_ON_SAP_FROM": ["count_of_nulls"]
+                                "CURRENCY_CODE": ["unique"], "IS_ON_SAP_FROM": ["count_of_nulls"],
+                                "COUNTRY_NAME": ["is_unique"]
                            },
         "expectations":    {
                                 "table_analyzes": [
