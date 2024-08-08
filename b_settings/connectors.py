@@ -7,7 +7,9 @@
 
 # Import packages and modules
 from   b_settings import connectors as st_cnt
+import b_settings.global_variables as st_gv
 import easygui                              # for creating easy-to-use graphical user interfaces (GUIs) for user interactions
+import pandas as pd
 import pyodbc                               # for connecting to databases using ODBC (Open Database Connectivity) API
 import snowflake.connector as sf_con        # for establishing connection to snowflake database; to install (https://docs.snowflake.com/en/developer-guide/python-connector/python-connector-install): pip3 install snowflake-connector-python
 
@@ -57,7 +59,7 @@ def __generate_sql_server_connector(driver, server):       ## __ = private metho
     return sql_connection
 
 
-# Establish a connection to Snowflake or SQL Server database
+# Establish a connection to source Snowflake or source SQL Server database based on data in .json file
 def connect_to_source_db(json_dict):
     for value_level_0 in json_dict.values():
         for value_level_1 in value_level_0:
@@ -83,3 +85,48 @@ def connect_to_source_db(json_dict):
             value_level_1['connection'] = connection
 
     return json_dict
+
+
+# Generate Snowflake datasets from the target object that is always the same (selected Snowflake table)
+def generate_target_dataset():
+    # Snowflake connection details
+    # Prompt user to enter snowflake password
+    password = \
+        easygui.passwordbox(        # easygui.passwordbox() does not accept formatting specifiers (like {:>10}) to align text
+            f'Enter Snowflake password to\n'
+            f'warehouse:   WH_ADI_DATA_ANALYTICS\n'
+            f'database:     DB_ADI_EMEA_DEV\n'
+            f'schema:        SCH_ADI_EMEA_CORE\n'
+            f'object:            DIM_PP_ANALYSIS_DATA'
+        )
+
+    # Snowflake connection details
+    # Define your Snowflake connection parameters
+    conn_params = {
+        'user': 'peter.pisar@adiglobal.com',
+        'password': password,
+        'account': 'resideo-edh.privatelink',  # Example: 'xy12345.east-us-2.azure'
+        'warehouse': 'WH_ADI_DATA_ANALYTICS',
+        'database': 'DB_ADI_EMEA_DEV',
+        'schema': 'SCH_ADI_EMEA_CORE'
+    }
+
+    # Create a connection object
+    conn = sf_con.connect(**conn_params)
+
+    # Execute the SQL query and store the result directly in the target_dict
+    st_gv.target_dict['dataset'] = pd.read_sql(
+        '''
+        WITH CTE_MAX_DATE AS (
+        SELECT MAX(DATE_AND_TIME) AS MAX_DATE_AND_TIME
+        FROM DB_ADI_EMEA_DEV.SCH_ADI_EMEA_CORE.DIM_PP_ANALYSIS_DATA
+        )
+        SELECT *
+        FROM DB_ADI_EMEA_DEV.SCH_ADI_EMEA_CORE.DIM_PP_ANALYSIS_DATA
+        WHERE DATE_AND_TIME = (SELECT MAX_DATE_AND_TIME FROM CTE_MAX_DATE);
+        ''',
+        conn
+    )
+    st_gv.target_dict['connection'] = conn
+
+    return None

@@ -17,6 +17,7 @@ sys.path.insert(0, parent_dir_path)     # working option 1: https://stackoverflo
 
 # Import packages and modules
 from   b_settings import connectors as st_c, user_inputs as st_pui
+import b_settings.global_variables as st_gv
 import c_datasets as dt
 import d_analyzes as anlz       # from d_analyzes import table_analyzes - it will also work
 import e_outputs  as op
@@ -33,10 +34,13 @@ def main():
     op.user_errors.display_input_file_error(json_dict)     # display a potential error with readiness of a selected .json file
     op.log.log_event('completed: Load data from a .json file')
 
-    # Establish a connection to snowflake if possible
+    # Establish a connection to the source Snowflake or source SQL Server database
     json_dict = st_c.connect_to_source_db(json_dict)
     json_dict = op.user_errors.display_snowflake_connection_errors(json_dict)  # display potential errors with a connection to snowflake
     op.log.log_event('completed: Establish a connection to Snowflake')
+
+    # Generate Snowflake datasets from the target object
+    st_c.generate_target_dataset()
     # ----------------------------------------------------------------------------
     # End - prepare json_dict to be tranformed into global variable snowflake_dict
 
@@ -56,7 +60,11 @@ def main():
 
     # Display results of snowflake dataset analyzes
     ## op.log.print_snowflake_dict()
-    op.export.export_to_excel()
+
+    # Transform data for exporting and export the transformed data
+    df_long = op.export.transforms_for_export(st_gv.dataset_dict)
+    op.export.export_to_snowflake(df_long)
+    ###op.export.export_to_excel()
     op.log.log_event('completed: Display results of Snowflake dataset analyzes')
     # ------------------------------------------------------------------------------
     # End - process global variable snowflake_dict into final output shown to a user

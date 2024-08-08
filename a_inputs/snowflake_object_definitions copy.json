@@ -21,19 +21,19 @@
                            },
         "expectations":    {
                                 "table_analyzes": [
-                                    {"candidate_keys": ["COUNTRY_ID", "COUNTRY_CODE", "COUNTRY_NAME", "COUNTRY_ORD_NUM"]},
-                                    {"count_of_columns": [14]},
-                                    {"NOT_FROM_OPTIONS1": ["FOR TABLE ANALYZES1"]},
-                                    {"NOT_FROM_OPTIONS2": ["FOR TABLE ANALYZES2"]},
-                                    {"NOT_FROM_OPTIONS3": ["FOR TABLE ANALYZES3"]},
-                                    {"NOT_FROM_OPTIONS4": ["FOR TABLE ANALYZES4"]}
+                                    {"candidate_keys": ["COUNTRY_ORD_NUM", "ExactOrMore"]},
+                                    {"count_of_columns": [14, "ExactOrMore"]},
+                                    {"NOT_FROM_OPTIONS1": ["FOR TABLE ANALYZES1", "ExactOrMore"]},
+                                    {"NOT_FROM_OPTIONS2": ["FOR TABLE ANALYZES2", "ExactOrMore"]},
+                                    {"NOT_FROM_OPTIONS3": ["FOR TABLE ANALYZES3", "ExactOrMore"]},
+                                    {"NOT_FROM_OPTIONS4": ["FOR TABLE ANALYZES4", "ExactOrMore"]}
                                 ],
                                 "column_analyzes": [
-                                    ["COUNTRY_ID", "avg", 17.44444444],
-                                    ["REGION_ORD_NUM", "min", 1],
-                                    ["REGION_ORD_NUM", "avg", 50],
-                                    ["REGION_ORD_NUM", "max", 100],
-                                    ["TEST1a", "TEST1b", "Test1c"]
+                                    ["COUNTRY_ID", "avg", 17.44444444, "Exact"],
+                                    ["REGION_ORD_NUM", "min", 1, "Exact"],
+                                    ["REGION_ORD_NUM", "avg", 50, "Exact"],
+                                    ["REGION_ORD_NUM", "max", 100, "Exact"],
+                                    ["TEST1a", "TEST1b", "Test1c", "Exact"]
                                 ]
                            },
         
@@ -62,7 +62,7 @@
                                 "SUPPLIER_ACCOUNT": ["count_of_nulls"]
                            },
         "expectations": {
-                            "table_analyzes": [{"test key level1": "test  value  level1"}]
+                            "table_analyzes": [{"test key level1": ["test  value  level1", "ExactOrLess"]}]
                         },
 
         "comments":  [
@@ -94,13 +94,13 @@
                            },
         "expectations": {
                             "table_analyzes": [
-                                {"count_of_rows": [80374]},
-                                {"count_of_columns": [11]}
+                                {"count_of_rows": [80374, "Any"]},
+                                {"count_of_columns": [11, "Any"]}
                             ],
                             "column_analyzes": [
-                                ["Sup_ID", "min", 1],
-                                ["Sup_ID", "avg", 49130.59627],
-                                ["Sup_ID", "max", 92415]
+                                ["Sup_ID", "min", 1, "Any"],
+                                ["Sup_ID", "avg", 49130.59627, "Any"],
+                                ["Sup_ID", "max", 92415, "Any"]
                             ]
                         },
 

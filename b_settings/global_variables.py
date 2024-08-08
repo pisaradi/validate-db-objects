@@ -11,5 +11,12 @@ dataset_dict = {
     'object_names': [],     # Snowflake or SQL Server object names (main key in a .json file)
     'table_analyzes': [],   # analyzes required to be made over whole datasets
     'column_analyzes': [],  # analyzes required to be made over specified columns
-    'expectations': []      # expected results based on previous validations (in any tool)
+    'expectations': [],     # expected results based on previous validations (in any tool)
+    'change_type': []       # defined possibility of differences between current and expectation result
+}
+
+# Target object
+target_dict = {
+    'dataset': None,        # dataframe from the target object
+    'connection': None
 }
