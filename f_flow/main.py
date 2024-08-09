@@ -64,7 +64,6 @@ def main():
     # Transform data for exporting and export the transformed data
     df_long = op.export.transforms_for_export(st_gv.dataset_dict)
     op.export.export_to_snowflake(df_long)
-    ###op.export.export_to_excel()
     op.log.log_event('completed: Display results of Snowflake dataset analyzes')
     # ------------------------------------------------------------------------------
     # End - process global variable snowflake_dict into final output shown to a user

@@ -42,9 +42,9 @@ def __execute_analysis(object_name, over, analysis) -> dict:       ## __ = priva
             if not filtered_df.empty:
                 analysis_result = filtered_df['CURRENT_RESULT'].iloc[0]
             else:
-                analysis_result = None
+                analysis_result = value_level_1[0]
 
-            if analysis_result != None:
+            if analysis_result != 'unknown':
                 if value_level_1[0] != analysis_result:
                     value_level_1[0] = analysis_result
 
@@ -68,11 +68,12 @@ def __execute_analysis(object_name, over, analysis) -> dict:       ## __ = priva
         if not filtered_df.empty:
             analysis_result = filtered_df['CURRENT_RESULT'].iloc[0]
         else:
-            analysis_result = None
+            analysis_result = analysis[2]
 
-        if analysis_result != None:
-            if analysis[2].lower() in ('false', 'true'):
-                analysis[2] = analysis[2].capitalize()      # to ensure texts False and Text beginning with the capital letters
+        if analysis_result != 'unknown':
+            if isinstance(analysis[2], bool):
+                if analysis[2].lower() in ('false', 'true'):
+                    analysis[2] = analysis[2].capitalize()      # to ensure texts False and Text beginning with the capital letters
             if analysis[2] != analysis_result:
                 analysis[2] = analysis_result       # e.g. also True is change to true
         

@@ -12,9 +12,26 @@ import pandas as pd
 ## to install snowflake.sqlalchemy: pip3 install --upgrade snowflake-sqlalchemy
 
 
+# Create string from Change Type
+#   This function is necessary in order to process records like {"candidate_keys": ["COUNTRY_ID", "COUNTRY_CODE", "COUNTRY_NAME", "COUNTRY_ORD_NUM", "ExactOrMore"]}, from .json file.
+def __create_string_change_type(row):
+    if isinstance(row, list):
+        if len(row) > 1:
+            # Process the list with more than one element
+            step1 = ['unknown' if pd.isna(item) else str(item) for item in row]
+            return ', '.join(step1)
+        elif len(row) == 1:
+            # Return the single element
+            return row[0]
+    else:
+        if pd.isna(row):
+            return 'unknown'
+        else:
+            return row
+
+
 # transform data to a suitable form for export to an Excel file
 def transforms_for_export(input_data):
-
     # data preparation to transform data into long data format
     data_combined = []
     expectation_combined = []
@@ -60,7 +77,7 @@ def transforms_for_export(input_data):
                 expectation_combined.append({
                     'Object Name': obj_name,
                     'Analysis Type': 'Column Analysis',
-                    'Analysis Name': f'{col[1]} in {col[0]}',
+                    'Analysis Name': f'{col[1]} of {col[0]}',
                     'Expectation Result': col[2]
                     # 'Status': 'Expectation',
                     # 'Analysis Result': col[2]
@@ -83,7 +100,7 @@ def transforms_for_export(input_data):
                 change_type_combined.append({
                     'Object Name': obj_name,
                     'Analysis Type': 'Column Analysis',
-                    'Analysis Name': f'{col[1]} in {col[0]}',
+                    'Analysis Name': f'{col[1]} of {col[0]}',
                     'Change Type': col[2]
                     # 'Status': 'Expectation',
                     # 'Analysis Result': col[2]
@@ -112,30 +129,15 @@ def transforms_for_export(input_data):
 
     # convert lists to strings in the 'Current Result' column
     #   this approach utilizes lambda function
-    df_long['Current Result'] = \
-        df_long['Current Result'].apply(lambda x:
-            ', '.join(map(str, x)) if isinstance(x, list) and len(x) > 1
-            else x[0] if isinstance(x, list) and len(x) == 1
-            else x
-        )
+    df_long['Current Result'] = df_long['Current Result'].apply(__create_string_change_type)
 
     # convert lists to strings in the 'Expectation Result' column
     #   this approach utilizes lambda function
-    df_long['Expectation Result'] = \
-        df_long['Expectation Result'].apply(lambda x:
-            'unknown' if pd.isna(x)     # action: update this pd.isna(x) in all relevant places to work with more than 1 list element
-            else ', '.join(map(str, x)) if isinstance(x, list) and len(x) > 1
-            else x[0] if isinstance(x, list) and len(x) == 1
-            else x
-        )
+    df_long['Expectation Result'] = df_long['Expectation Result'].apply(__create_string_change_type)
 
-    df_long['Change Type'] = \
-        df_long['Change Type'].apply(lambda x:
-            'unknown' if pd.isna(x)
-            else ', '.join(map(str, x)) if isinstance(x, list) and len(x) > 1
-            else x[0] if isinstance(x, list) and len(x) == 1
-            else x
-        )
+    # convert lists to strings in the 'Change Type' column
+    #   this approach utilizes lambda function
+    df_long['Change Type'] = df_long['Change Type'].apply(__create_string_change_type)
 
 
     # sort data for a better readability
@@ -151,18 +153,42 @@ def transforms_for_export(input_data):
 
 # Logic for the new 'Flag' column
 #   Action: Using of float() or other data type conversion will need to be conditional
-def __calculate_flag(row):      # action: update/fix this function
-    # if row['Change Type'] == 'Exact':
-    #     return 1 if str(row['Current Result']) == str(row['Expectation Result']) else 0
-    # elif row['Change Type'] == 'ExactOrLess':
-    #     return 1 if str(row['Current Result']) <= str(row['Expectation Result']) else 0
-    # elif row['Change Type'] == 'ExactOrMore':
-    #     return 1 if str(row['Current Result']) >= str(row['Expectation Result'].strip("'[]'")) else 0
-    # elif row['Change Type'] == 'Any':
-    #     return 1
-    # else:
-    #     return 0  # handles unexpected 'Change Type' values
-    return 0
+def __calculate_flag(row):
+
+    # Attempt to convert value to float; if not possible, keep it as a string
+    def to_comparable(value):
+        if isinstance(value, bool):           return 1 if value else 0
+        elif isinstance(value, (int, float)): return value
+        elif isinstance(value, str):
+            value = value.strip("'[]'").lower()
+
+            if value == 'true':    return 1     # this may occur in expectations
+            elif value == 'false': return 0     # this may occur in expectations
+            
+            # Convert to float if the value is numeric; otherwise, keep it as a string
+            try: return float(value)
+            except ValueError: return value
+        return value
+
+    current_result = to_comparable(row['Current Result'])
+    expectation_result = to_comparable(row['Expectation Result'])
+
+    # Attempt to convert both to float for comparison
+    #   Comparing data as float, if possible, is preferable.
+    try:
+        current_result = float(current_result)
+        expectation_result = float(expectation_result)
+    except ValueError:
+        # If conversion to float fails, fall back to string comparison
+        current_result = str(current_result)
+        expectation_result = str(expectation_result)
+
+    # Return value for 'Flag' column based on Change Type
+    if    row['Change Type'] == 'Exact':       return current_result == expectation_result
+    elif  row['Change Type'] == 'ExactOrLess': return current_result <= expectation_result
+    elif  row['Change Type'] == 'ExactOrMore': return current_result >= expectation_result
+    elif  row['Change Type'] == 'Any':         return 1
+    else: return 0  # handles unexpected 'Change Type' values
 
 
 def export_to_snowflake(df_long):
@@ -198,16 +224,15 @@ def export_to_snowflake(df_long):
                 row['Analysis Type'],
                 row['Analysis Name'],
                 row['Expectation Result'],
-                str(row['Current Result']),     # action: str() as a temporary solution because of NaN error 
+                str(row['Current Result']),     # action: str() as a temporary solution because of NaN error because ANALYSIS_TYPE = "Column Analysis" returns CURRENT_RESULT = "nan" every time
                 row['Change Type'],
-                0
-                #row['Flag']
+                row['Flag']
             ))
 
         # Commit the transaction
         st_gv.target_dict['connection'].commit()
     
-        print("Records inserted successfully")
+        print("Records inserted successfully.")
 
     except Exception as e:
         print(f"Error: {e}")
@@ -215,150 +240,3 @@ def export_to_snowflake(df_long):
         # Close the cursor and connection
         cursor.close()
         st_gv.target_dict['connection'].close()
-
-
-
-
-# # # # import packages and modules
-# # # import b_settings.global_variables as st_gv
-# # # from   e_outputs import user_errors as ue
-# # # from   openpyxl import Workbook
-# # # from   openpyxl.utils.dataframe import dataframe_to_rows
-# # # from   openpyxl.styles import Font
-# # # import os
-# # # import pandas as pd
-
-
-# # # # transform data to a suitable form for export to an Excel file
-# # # def __transform_for_excel(input_data):
-# # #     '''
-# # #     Parameters:
-# # #     input_data - dictionary containing results from previous evaluations (modules); this data will undergo transformation
-# # #     '''
-
-# # #     # data preparation to transform data into long data format
-# # #     data_combined = []
-    
-# # #     # get the analyzes (table, column) and expectations for every object
-# # #     for iteration, obj_name in enumerate(input_data['object_names']):
-# # #         # table analysis
-# # #         for key, value in input_data['table_analyzes'][iteration].items():
-# # #             data_combined.append({
-# # #                 'Object Name': obj_name,
-# # #                 'Analysis Type': 'Table Analysis',
-# # #                 'Analysis Name': f'{key}',
-# # #                 'Status': 'Current',
-# # #                 'Analysis Result': value
-# # #             })
-# # #         # column analysis
-# # #         for key, value in input_data['column_analyzes'][iteration].items():
-# # #             data_combined.append({
-# # #                 'Object Name': obj_name,
-# # #                 'Analysis Type': 'Column Analysis',
-# # #                 'Analysis Name': f'{key}',
-# # #                 'Status': 'Current',
-# # #                 'Analysis Result': value
-# # #             })
-# # #         # expectations for table analysis
-# # #         if 'table_analyzes' in input_data['expectations'][iteration]:
-# # #             for exp in input_data['expectations'][iteration]['table_analyzes']:
-# # #                 for key, value in exp.items():
-# # #                     data_combined.append({
-# # #                         'Object Name': obj_name,
-# # #                         'Analysis Type': 'Table Analysis',
-# # #                         'Analysis Name': f'{key}',
-# # #                         'Status': 'Expectation',
-# # #                         'Analysis Result': value
-# # #                     })
-# # #         # expectations for column analysis
-# # #         if 'column_analyzes' in input_data['expectations'][iteration]:
-# # #             for col in input_data['expectations'][iteration]['column_analyzes']:
-# # #                 data_combined.append({
-# # #                     'Object Name': obj_name,
-# # #                     'Analysis Type': 'Column Analysis',
-# # #                     'Analysis Name': f'{col[1]} of {col[0]}',
-# # #                     'Status': 'Expectation',
-# # #                     'Analysis Result': col[2]
-# # #                 })
-    
-# # #     # create a dataframe for long data format
-# # #     df_long = pd.DataFrame(data_combined)
-    
-# # #     # convert lists to strings in the 'Analysis Result' column
-# # #     #   this approach utilizes lambda function
-# # #     df_long['Analysis Result'] = \
-# # #         df_long['Analysis Result'].apply(lambda x:
-# # #             ', '.join(map(str, x)) if isinstance(x, list) and len(x) > 1
-# # #             else x[0] if isinstance(x, list) and len(x) == 1
-# # #             else x
-# # #         )
-
-# # #     # sort data for a better readability
-# # #     df_long['Sort Key'] = df_long['Object Name'] + df_long['Analysis Type'] + df_long['Analysis Name'] + df_long['Status']
-# # #     df_long.sort_values(by='Sort Key', inplace=True)
-# # #     df_long.drop(columns=['Sort Key'], inplace=True)
-    
-# # #     # add column 'Row ID'
-# # #     df_long.insert(0, 'Row ID', range(1, len(df_long) + 1))
-
-# # #     return df_long
-
-
-# # # # save evaluated and transformed results to an Excel file
-# # # def __save_to_excel(df_long, excel_file_name):
-# # #     '''
-# # #     Parameters:
-# # #     df_long - evaluated and transformed results suitable for saving to an Excel file
-# # #     excel_file_name - Excel file name where the evaluated and transformed results will be saved
-# # #     '''
-
-# # #     # create a new Excel workbook and add a worksheet
-# # #     wb = Workbook()
-# # #     ws = wb.active
-# # #     ws.title = 'Analysis Data'
-
-# # #     # append DataFrame to the worksheet
-# # #     for row in dataframe_to_rows(df_long, index=False, header=True):
-# # #         ws.append(row)
-    
-# # #     # set column widths
-# # #     column_widths = {
-# # #         'A': 6.75,      # Column Width in Excel = 6
-# # #         'B': 40.75,     # Column Width in Excel = 40
-# # #         'C': 15.75,     # Column Width in Excel = 15
-# # #         'D': 35.75,     # Column Width in Excel = 35
-# # #         'E': 12.75,     # Column Width in Excel = 12
-# # #         'F': 65.75      # Column Width in Excel = 65
-# # #     }
-# # #     for col, width in column_widths.items():
-# # #         ws.column_dimensions[col].width = width
-
-# # #     # apply bold font to the header row
-# # #     for cell in ws[1]:
-# # #         cell.font = Font(bold=True)
-
-# # #     # save the workbook
-# # #     script_dir = os.path.dirname(os.path.abspath(__file__))
-# # #     parent_dir = os.path.abspath(os.path.join(script_dir, os.pardir))   # didn't work when debugging: parent_dir = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
-# # #     excel_file_path = os.path.join(parent_dir, 'e_outputs', excel_file_name)
-# # #     wb.save(excel_file_path)
-
-# # #     return None
-
-# # # # export results as tidy long data table into an excel
-# # # def export_to_excel(input_data = st_gv.dataset_dict, excel_file_name = r'tidy long data export.xlsx'):      # action: input_data = st_gv.dataset_dict - this does not have sense since I can use directly global variable but it might have a sence from readablity point of view - I will reconsider the final apporach
-# # #     '''
-# # #     Parameters:
-# # #     input_data - dictionary containing results from previous evaluations (modules); this data will undergo transformation
-# # #     excel_file_name - Excel file name where the evaluated and transformed results will be saved
-# # #     '''
-
-# # #     df_long = __transform_for_excel(input_data)
-# # #     try:
-# # #         __save_to_excel(df_long, excel_file_name)   # attempt to save the dataframe to an Excel file
-# # #     except PermissionError as e:
-# # #         ue.handle_permission_error(e)   # handle the PermissionError when the Excel file is already open or write permissions are insufficient
-# # #     except Exception as e:
-# # #         ue.handle_unexpected_error(e)   # handle any unexpected exceptions that occur during the process
-
-# # #     return None

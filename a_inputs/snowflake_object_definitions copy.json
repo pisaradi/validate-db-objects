@@ -21,7 +21,7 @@
                            },
         "expectations":    {
                                 "table_analyzes": [
-                                    {"candidate_keys": ["COUNTRY_ORD_NUM", "ExactOrMore"]},
+                                    {"candidate_keys": ["COUNTRY_ID", "COUNTRY_CODE", "COUNTRY_NAME", "COUNTRY_ORD_NUM", "ExactOrMore"]},
                                     {"count_of_columns": [14, "ExactOrMore"]},
                                     {"NOT_FROM_OPTIONS1": ["FOR TABLE ANALYZES1", "ExactOrMore"]},
                                     {"NOT_FROM_OPTIONS2": ["FOR TABLE ANALYZES2", "ExactOrMore"]},

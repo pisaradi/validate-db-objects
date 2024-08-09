@@ -3,6 +3,7 @@ o	Expectations v .json sú nepovinné – do doplním aj do readme.md
 transformations.py -> value_level_1['connection'].close()  -  connection by malo byť connections, teda množné číslo ako je už aj napríklad st_gv.dataset_dict['datasets']
 pridať stĺpce DATABASE_NAME, SCHEMA_NAME, OBJECT_NAME bude slúžiť ako názov objektu v databáze a aktuálny OBJECT_NAME bude premenovaný na OBJECT_LABEL (to bude názov z JSON-u)
 ako z toho spraviť .exe súbor
+overiť, čo sa stane, ak nezadám heslo alebo zadám nesprávne heslo na pripojenie do DB_ADI_EMEA_DEV.SCH_ADI_EMEA_CORE.DIM_PP_ANALYSIS_DATA
 zvážiť testy na referenčnú integritu
 zvážiť/skontrolovať ochrany na neexistenciu objektu zadaného v JSONe (ale asi na to mám error handling)
 keď tu budem mať aj Change Type, tak do readme.md zapíšem akceptovateľné hodnoty a čo tie hodnoty znamenajú

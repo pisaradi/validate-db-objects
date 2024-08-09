@@ -29,7 +29,7 @@ def __execute_analysis(over, analysis, order) -> dict:       ## __ = private met
     elif analysis == 'avg':
         # calculate the average of a column only if that column specified in the 'over' variable is of a numeric data type 
         if pd.api.types.is_numeric_dtype(st_gv.dataset_dict['datasets'][order].loc[:, over]):
-            return {f'{analysis} of {over}': st_gv.dataset_dict['datasets'][order].loc[:, over].agg('mean')}
+            return {f'{analysis} of {over}': st_gv.dataset_dict['datasets'][order].loc[:, over].agg('mean').item()}
         else:
             return {f'{analysis} of {over}': f'NaN (reason: non numeric data type)'}    # NaN = Not a Number
     elif analysis == 'max':
