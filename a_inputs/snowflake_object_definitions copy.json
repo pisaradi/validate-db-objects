@@ -33,7 +33,7 @@
                                     ["REGION_ORD_NUM", "min", 1, "Exact"],
                                     ["REGION_ORD_NUM", "avg", 50, "Exact"],
                                     ["REGION_ORD_NUM", "max", 100, "Exact"],
-                                    ["TEST1a", "TEST1b", "Test1c", "Exact"]
+                                    ["TEST1a", "TEST1b", "false", "Exact"]
                                 ]
                            },
         
@@ -62,7 +62,10 @@
                                 "SUPPLIER_ACCOUNT": ["count_of_nulls"]
                            },
         "expectations": {
-                            "table_analyzes": [{"test key level1": ["test  value  level1", "ExactOrLess"]}]
+                            "table_analyzes": [
+                                {"test key level1": ["test  value  level1", "ExactOrLess"]},
+                                {"test key level2": [1, 2, 3, 4, 5, "ExactOrLess"]}
+                            ]
                         },
 
         "comments":  [

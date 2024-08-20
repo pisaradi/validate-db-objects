@@ -12,34 +12,26 @@ import pandas as pd
 ## to install snowflake.sqlalchemy: pip3 install --upgrade snowflake-sqlalchemy
 
 
-# Create string from Change Type
+# Create string from row
 #   This function is necessary in order to process records like {"candidate_keys": ["COUNTRY_ID", "COUNTRY_CODE", "COUNTRY_NAME", "COUNTRY_ORD_NUM", "ExactOrMore"]}, from .json file.
-def __create_string_change_type(row):
-    if isinstance(row, list):
-        if len(row) > 1:
-            # Process the list with more than one element
-            step1 = ['unknown' if pd.isna(item) else str(item) for item in row]
-            return ', '.join(step1)
-        elif len(row) == 1:
-            # Return the single element
-            return row[0]
-    else:
-        if pd.isna(row):
-            return 'unknown'
-        else:
-            return row
+def __create_string_from_row(row):
+    def __convert_item(item):
+        return 'unknown' if pd.isna(item) else str(item)
+    
+    if isinstance(row, list): return ', '.join(__convert_item(item) for item in row)    # convert and join a list with any number of elements
+    else: return __convert_item(row)        # convert single non-list value
 
 
-# transform data to a suitable form for export to an Excel file
+# Transform data to a suitable form for export to the target object (Snowflake database table)
 def transforms_for_export(input_data):
-    # data preparation to transform data into long data format
+    # Data preparation to transform data into long data format
     data_combined = []
     expectation_combined = []
     change_type_combined = []
 
-    # get the analyzes (table, column) and expectations for every object
+    # Get the analyzes (table, column) and expectations for every object
     for iteration, obj_name in enumerate(input_data['object_names']):
-        # table analysis
+        # Table analysis
         for key, value in input_data['table_analyzes'][iteration].items():
             data_combined.append({
                 'Object Name': obj_name,
@@ -49,7 +41,7 @@ def transforms_for_export(input_data):
                 # 'Status': 'Current',
                 # 'Analysis Result': value
             })
-        # column analysis
+        # Column analysis
         for key, value in input_data['column_analyzes'][iteration].items():
             data_combined.append({
                 'Object Name': obj_name,
@@ -59,7 +51,7 @@ def transforms_for_export(input_data):
                 # 'Status': 'Current',
                 # 'Analysis Result': value
             })
-        # expectations for table analysis
+        # Expectations for table analysis
         if 'table_analyzes' in input_data['expectations'][iteration]:
             for exp in input_data['expectations'][iteration]['table_analyzes']:
                 for key, value in exp.items():
@@ -71,7 +63,7 @@ def transforms_for_export(input_data):
                         # 'Status': 'Expectation',
                         # 'Analysis Result': value
                     })
-        # expectations for column analysis
+        # Expectations for column analysis
         if 'column_analyzes' in input_data['expectations'][iteration]:
             for col in input_data['expectations'][iteration]['column_analyzes']:
                 expectation_combined.append({
@@ -82,7 +74,7 @@ def transforms_for_export(input_data):
                     # 'Status': 'Expectation',
                     # 'Analysis Result': col[2]
                 })
-        # change_type for table analysis
+        # Change_type for table analysis
         if 'table_analyzes' in input_data['change_type'][iteration]:
             for exp in input_data['change_type'][iteration]['table_analyzes']:
                 for key, value in exp.items():
@@ -94,7 +86,7 @@ def transforms_for_export(input_data):
                         # 'Status': 'Expectation',
                         # 'Analysis Result': value
                     })
-        # change_type for column analysis
+        # Change_type for column analysis
         if 'column_analyzes' in input_data['change_type'][iteration]:
             for col in input_data['change_type'][iteration]['column_analyzes']:
                 change_type_combined.append({
@@ -107,7 +99,7 @@ def transforms_for_export(input_data):
                 })
 
 
-    # create a dataframe for long data format
+    # Create a dataframe for long data format
     df_long = pd.DataFrame(data_combined)
     df_long_expectations = pd.DataFrame(expectation_combined)
     df_long_change_types = pd.DataFrame(change_type_combined)
@@ -126,19 +118,11 @@ def transforms_for_export(input_data):
         how = 'left'
     )
 
-
-    # convert lists to strings in the 'Current Result' column
+    # convert lists to strings in columns 'Current Result' column, 'Expectation Result' and 'Change Type'
     #   this approach utilizes lambda function
-    df_long['Current Result'] = df_long['Current Result'].apply(__create_string_change_type)
-
-    # convert lists to strings in the 'Expectation Result' column
-    #   this approach utilizes lambda function
-    df_long['Expectation Result'] = df_long['Expectation Result'].apply(__create_string_change_type)
-
-    # convert lists to strings in the 'Change Type' column
-    #   this approach utilizes lambda function
-    df_long['Change Type'] = df_long['Change Type'].apply(__create_string_change_type)
-
+    df_long['Current Result'] = df_long['Current Result'].apply(__create_string_from_row)
+    df_long['Expectation Result'] = df_long['Expectation Result'].apply(__create_string_from_row)
+    df_long['Change Type'] = df_long['Change Type'].apply(__create_string_from_row)
 
     # sort data for a better readability
     df_long['Sort Key'] = df_long['Object Name'] + df_long['Analysis Type'] + df_long['Analysis Name']
@@ -151,8 +135,7 @@ def transforms_for_export(input_data):
     return df_long
 
 
-# Logic for the new 'Flag' column
-#   Action: Using of float() or other data type conversion will need to be conditional
+# Logic for 'Flag' column
 def __calculate_flag(row):
 
     # Attempt to convert value to float; if not possible, keep it as a string
@@ -161,7 +144,6 @@ def __calculate_flag(row):
         elif isinstance(value, (int, float)): return value
         elif isinstance(value, str):
             value = value.strip("'[]'").lower()
-
             if value == 'true':    return 1     # this may occur in expectations
             elif value == 'false': return 0     # this may occur in expectations
             
@@ -184,11 +166,11 @@ def __calculate_flag(row):
         expectation_result = str(expectation_result)
 
     # Return value for 'Flag' column based on Change Type
-    if    row['Change Type'] == 'Exact':       return current_result == expectation_result
-    elif  row['Change Type'] == 'ExactOrLess': return current_result <= expectation_result
-    elif  row['Change Type'] == 'ExactOrMore': return current_result >= expectation_result
-    elif  row['Change Type'] == 'Any':         return 1
-    else: return 0  # handles unexpected 'Change Type' values
+    if    row['Change Type'] == 'Exact':       return expectation_result == current_result
+    elif  row['Change Type'] == 'ExactOrLess': return expectation_result <= current_result
+    elif  row['Change Type'] == 'ExactOrMore': return expectation_result >= current_result
+    elif  row['Change Type'] == 'Any':         return True
+    else: return False  # handles unexpected 'Change Type' values
 
 
 def export_to_snowflake(df_long):
@@ -210,8 +192,6 @@ def export_to_snowflake(df_long):
 
         # Logic for the new 'Flag' column
         df['Flag'] = df.apply(lambda row: __calculate_flag(row), axis=1)
-
-        # print(df)
 
         # Prepare a timestamp
         current_timestamp = datetime.datetime.now()

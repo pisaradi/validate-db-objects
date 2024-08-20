@@ -82,7 +82,7 @@ def connect_to_source_db(json_dict):
             
             # Add key connection to json_dict
             #   Key connection does not exist in any level of json_dict therefore is always added and never appended
-            value_level_1['connection'] = connection
+            value_level_1['connection'] = connection        # connection is only one for every object name
 
     return json_dict
 

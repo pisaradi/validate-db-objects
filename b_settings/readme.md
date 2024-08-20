@@ -40,14 +40,18 @@
     - can appear any number of times,
     - can contain almost any character in its name,
     - must be unique in the file.
+  - Any value can be either number (without "") or text (within "").
+    - Even "false", "False", "true", "True" have to be in "".
+  - Any key (the 1st value in any {}) has to be unique with the same object name.
 - For better readability:
   - empty rows can be inserted between sections as needed,
   - it's recommended to place corresponding opening and closing brackets:
     - either on the same row with the text or nothing in between, or
     - on separate rows with the text indented in the following row.
 - The table below explains the significance of sections under the main objects' names.
-  - Text enclosed in \|\| does not represent actual options. \
-    Instead, it indicates that the user must determine the appropriate text based on all information provided in the corresponding table row.
+  - Any text enclosed in \|\| does not represent actual option. \
+    Instead, it indicates that the user must determine the appropriate text based on \
+    all information provided in the corresponding table row.
 
 | Section         | Option           | Description                                                                  |
 | --------------- | ---------------- | ---------------------------------------------------------------------------- |
@@ -73,4 +77,10 @@
 |                 | count_of_nulls   | Count of null values in a selected column                                    |
 | expectations    | table_analyzes   | Any expectations (not only from options) for table analyzes                  |
 |                 | column_analyzes  | Any expectations (not only from options) for column analyzes                 |
+|                 | \|Change Type\|  | The required last element in each expectation line in the most inner []      |
+|                 |                  | with following possibilities: Exact, ExactOrLess , ExactOrMore , Any         |
+|                 |                  | Exact: expectation = source value                                            |
+|                 |                  | ExactOrLess: expectation <= source value                                     |
+|                 |                  | ExactOrMore: expectation >= source value                                     |
+|                 |                  | Any: ignore expectation vs source value (Change Type is required)            |
 | comments        | \|many options\| | Any suitable text that will not be further processed                         |
