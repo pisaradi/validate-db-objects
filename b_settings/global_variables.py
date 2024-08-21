@@ -7,8 +7,9 @@
 
 # dataset information transformed (inside methods) from a user input .json file
 dataset_dict = {
+    'object_labels': [],    # Main key in a .json file (the highest level of the first {})
     'datasets': [],         # Snowflake or SQL Server datasets
-    'object_names': [],     # Snowflake or SQL Server object names (main key in a .json file)
+    'object_names': [],     # Snowflake or SQL Server object names
     'table_analyzes': [],   # analyzes required to be made over whole datasets
     'column_analyzes': [],  # analyzes required to be made over specified columns
     'expectations': [],     # expected results based on previous validations (in any tool)

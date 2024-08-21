@@ -1,5 +1,5 @@
 pridať column_analyzes: sum (nezabudni doplniť aj do readme.md)
-pridať stĺpce DATABASE_NAME, SCHEMA_NAME, OBJECT_NAME bude slúžiť ako názov objektu v databáze a aktuálny OBJECT_NAME bude premenovaný na OBJECT_LABEL (to bude názov z JSON-u)
+pridať stĺpce DATABASE_NAME, SCHEMA_NAME, OBJECT_NAME bude slúžiť ako názov objektu v databáze
 ako z toho spraviť .exe súbor
 overiť, čo sa stane, ak nezadám heslo alebo zadám nesprávne heslo na pripojenie do DB_ADI_EMEA_DEV.SCH_ADI_EMEA_CORE.DIM_PP_ANALYSIS_DATA
 zvážiť testy na referenčnú integritu
@@ -8,7 +8,6 @@ nahrať na github hlave kvôli readme.md
 Nachystám nejaký .json, kde si užívateľ zadá:
             account   = 'resideo-edh.privatelink',  # account name (it does not include the snowflakecomputing.com suffix),
             user      = 'peter.pisar@adiglobal.com',
-stĺpec FLAG v Snowflake premenujem na SUCCESS_FLAG
 možno pridať: test referenčnej integrity
 možno pridať: test of composite key
 

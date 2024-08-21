@@ -47,7 +47,7 @@ def analyze_table():
     table_analyzes_results = []
 
     # iterate through the length (number of items in) of dataset_dict
-    for dict_index in range( len( st_gv.dataset_dict['object_names'] ) ):
+    for dict_index in range( len( st_gv.dataset_dict['object_labels'] ) ):
         # analyzes results of a single dataset
         dataset_analyzes = {}
 

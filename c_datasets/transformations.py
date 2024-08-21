@@ -25,7 +25,7 @@ def generate_snowflake_datasets(json_dict):
             # Prepare data to be returned to all individual keys of dataset_dict
             st_gv.dataset_dict['datasets'].append(pd.read_sql(select_statement, value_level_1['connection']))
             value_level_1['connection'].close()      # close Snowflake connection because dataframe is ready; connection is only one for every object name
-            st_gv.dataset_dict['object_names'].append(key_level_0)
+            st_gv.dataset_dict['object_labels'].append(key_level_0)
             st_gv.dataset_dict['table_analyzes'].append(value_level_1['table_analyzes'])
             st_gv.dataset_dict['column_analyzes'].append(value_level_1['column_analyzes'])
             st_gv.dataset_dict['expectations'].append(value_level_1['expectations'])

@@ -10,10 +10,10 @@ import b_settings.global_variables as st_gv
 
 
 # Execute comparison analysis
-def __execute_analysis(object_name, over, analysis) -> dict:       ## __ = private method only accessible within the same module
+def __execute_analysis(object_label, over, analysis) -> dict:       ## __ = private method only accessible within the same module
     '''
     Parameters:
-    object_name: Contains the value of column OBJECT_NAME from the final Snowflake table; it's the main key of each top level dictionary from JSON, e.g. SRC DIM_PRODUCT
+    object_label: Contains the value of column OBJECT_LABEL from the final Snowflake table; it's the main key of each top level dictionary from JSON, e.g. SRC DIM_PRODUCT
     over (str): Specifies over which specific analyzes (keys of dictionary expectations) of a dataframe the analysis should be performed. Can be used to get value of column ANALYSIS_TYPE from the final Snowflake table.
     analysis (str): The analyzis name. Options: value part of a dictionary under dictionary expectations.
     order (int): Does not exist as the input parameter because this function does not consider st_gv.dataset_dict.
@@ -33,7 +33,7 @@ def __execute_analysis(object_name, over, analysis) -> dict:       ## __ = priva
             # Note: st_gv.target_dict is set to the previous maximum date in connectors.py -> generate_target_dataset()
             filtered_df = \
                 st_gv.target_dict['dataset'][
-                    (st_gv.target_dict['dataset']['OBJECT_NAME'] == object_name)
+                    (st_gv.target_dict['dataset']['OBJECT_LABEL'] == object_label)
                     & (st_gv.target_dict['dataset']['ANALYSIS_TYPE'] == 'Table Analysis')
                     & (st_gv.target_dict['dataset']['ANALYSIS_NAME'] == key_level_1)
                 ]
@@ -57,7 +57,7 @@ def __execute_analysis(object_name, over, analysis) -> dict:       ## __ = priva
 
         filtered_df = \
             st_gv.target_dict['dataset'][
-                (st_gv.target_dict['dataset']['OBJECT_NAME'] == object_name)
+                (st_gv.target_dict['dataset']['OBJECT_LABEL'] == object_label)
                 & (st_gv.target_dict['dataset']['ANALYSIS_TYPE'] == 'Column Analysis')
                 & (st_gv.target_dict['dataset']['ANALYSIS_NAME'] == f'{analysis[1]} of {analysis[0]}')
             ]
@@ -111,7 +111,7 @@ def compare_with_expectations():
     changed_type_results = []
 
     # Iterate through the length (number of items in) of dataset_dict
-    for dict_index in range( len( st_gv.dataset_dict['object_names'] ) ):
+    for dict_index in range( len( st_gv.dataset_dict['object_labels'] ) ):
         # Analyzes results of a single dataset
         comparison_analyzes = {}
         change_type_analyzes = {}
@@ -127,7 +127,7 @@ def compare_with_expectations():
                         # Get analysis and added it to other analyzes
                         result_for_comparison_analyzes, result_for_changed_type = (
                             __execute_analysis(
-                                object_name = st_gv.dataset_dict['object_names'][dict_index],
+                                object_label = st_gv.dataset_dict['object_labels'][dict_index],
                                 over = key_level_1,
                                 ## over = re.sub('^\d+', '', key_level_1),     # remove digits at the beginning using a regular expression
                                 analysis = value_level_2

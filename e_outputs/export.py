@@ -30,7 +30,7 @@ def transforms_for_export(input_data):
     change_type_combined = []
 
     # Get the analyzes (table, column) and expectations for every object
-    for iteration, obj_name in enumerate(input_data['object_names']):
+    for iteration, obj_name in enumerate(input_data['object_labels']):
         # Table analysis
         for key, value in input_data['table_analyzes'][iteration].items():
             data_combined.append({
@@ -135,8 +135,8 @@ def transforms_for_export(input_data):
     return df_long
 
 
-# Logic for 'Flag' column
-def __calculate_flag(row):
+# Logic for 'Success_Flag' column
+def __calculate_success_flag(row):
 
     # Attempt to convert value to float; if not possible, keep it as a string
     def to_comparable(value):
@@ -165,7 +165,7 @@ def __calculate_flag(row):
         current_result = str(current_result)
         expectation_result = str(expectation_result)
 
-    # Return value for 'Flag' column based on Change Type
+    # Return value for 'Success_Flag' column based on Change Type
     if    row['Change Type'] == 'Exact':       return expectation_result == current_result
     elif  row['Change Type'] == 'ExactOrLess': return expectation_result <= current_result
     elif  row['Change Type'] == 'ExactOrMore': return expectation_result >= current_result
@@ -181,8 +181,8 @@ def export_to_snowflake(df_long):
         # Define the SQL INSERT statement
         sql_insert = """
         INSERT INTO DIM_PP_ANALYSIS_DATA (
-                DATE_AND_TIME, OBJECT_NAME, ANALYSIS_TYPE, ANALYSIS_NAME,
-                EXPECTATION_RESULT, CURRENT_RESULT, CHANGE_TYPE, FLAG
+                DATE_AND_TIME, OBJECT_LABEL, ANALYSIS_TYPE, ANALYSIS_NAME,
+                EXPECTATION_RESULT, CURRENT_RESULT, CHANGE_TYPE, SUCCESS_FLAG
         )
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
         """
@@ -190,8 +190,8 @@ def export_to_snowflake(df_long):
         # Create a dataframe    
         df = pd.DataFrame(df_long)
 
-        # Logic for the new 'Flag' column
-        df['Flag'] = df.apply(lambda row: __calculate_flag(row), axis=1)
+        # Logic for the new 'Success_Flag' column
+        df['Success Flag'] = df.apply(lambda row: __calculate_success_flag(row), axis=1)
 
         # Prepare a timestamp
         current_timestamp = datetime.datetime.now()
@@ -206,7 +206,7 @@ def export_to_snowflake(df_long):
                 row['Expectation Result'],
                 str(row['Current Result']),     # action: str() as a temporary solution because of NaN error because ANALYSIS_TYPE = "Column Analysis" returns CURRENT_RESULT = "nan" every time
                 row['Change Type'],
-                row['Flag']
+                row['Success Flag']
             ))
 
         # Commit the transaction
